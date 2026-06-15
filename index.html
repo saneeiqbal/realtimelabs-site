@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Realtime Labs — AI Infrastructure Advisory</title>
+  <meta name="description" content="Strategic AI infrastructure guidance for enterprises building at scale. Architecture, compute strategy, and ML platform advisory from practitioners." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+          colors: {
+            brand: {
+              500: '#7c6fff',
+              600: '#6152f3',
+              700: '#4f40e2',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { font-family: 'Inter', sans-serif; background: #080810; }
+    .glow { box-shadow: 0 0 60px 0 rgba(124, 111, 255, 0.2); }
+    .glow-sm { box-shadow: 0 0 30px 0 rgba(124, 111, 255, 0.1); }
+    .gradient-border {
+      background: linear-gradient(#0f0f1a, #0f0f1a) padding-box,
+                  linear-gradient(135deg, rgba(124,111,255,0.4), rgba(97,82,243,0.1)) border-box;
+      border: 1px solid transparent;
+    }
+    .hero-grid {
+      background-image:
+        linear-gradient(rgba(124,111,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(124,111,255,0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+    .text-gradient {
+      background: linear-gradient(135deg, #ffffff 0%, #a8a0ff 60%, #7c6fff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  </style>
+</head>
+<body class="text-white antialiased">
+
+  <!-- Nav -->
+  <nav class="fixed top-0 left-0 right-0 z-50 border-b border-white/5 backdrop-blur-xl" style="background: rgba(8,8,16,0.85)">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <div class="flex items-center gap-2.5">
+        <div class="w-7 h-7 rounded-lg flex items-center justify-center" style="background:#6152f3">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M2 7L7 2L12 7L7 12L2 7Z" fill="white" opacity="0.9"/>
+            <path d="M4.5 7L7 4.5L9.5 7L7 9.5L4.5 7Z" fill="white"/>
+          </svg>
+        </div>
+        <span class="font-semibold text-white tracking-tight">Realtime Labs</span>
+      </div>
+      <a href="#book" class="text-sm font-medium px-4 py-2 rounded-lg text-white transition-colors" style="background:#6152f3">
+        Book a Call
+      </a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-grid relative pt-40 pb-32 px-6 overflow-hidden">
+    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+      <div class="rounded-full blur-[120px]" style="width:600px;height:600px;background:rgba(97,82,243,0.12)"></div>
+    </div>
+
+    <div class="max-w-4xl mx-auto text-center relative">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium mb-8 font-mono" style="border:1px solid rgba(124,111,255,0.3);background:rgba(97,82,243,0.1);color:#7c6fff">
+        <span class="w-1.5 h-1.5 rounded-full animate-pulse" style="background:#7c6fff"></span>
+        AI Infrastructure Advisory
+      </div>
+
+      <h1 class="text-5xl md:text-7xl font-bold leading-tight tracking-tight mb-6">
+        <span class="text-gradient">Build AI systems</span><br />
+        <span class="text-white">that scale.</span>
+      </h1>
+
+      <p class="text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-10" style="color:rgba(255,255,255,0.5)">
+        Strategic guidance on AI architecture, compute strategy, and ML platform design — from practitioners who've shipped production AI at the frontier.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="#book" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-white transition-all duration-200 glow" style="background:#6152f3">
+          Book a 30-Minute Call
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#services" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-medium transition-all duration-200" style="border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.6)">
+          See what we do
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-24 px-6">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <p class="font-mono text-sm font-medium mb-3" style="color:#7c6fff">Services</p>
+        <h2 class="text-3xl md:text-4xl font-bold text-white">Where we help</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+        <div class="gradient-border rounded-2xl p-7" style="background:#0f0f1a">
+          <div class="w-11 h-11 rounded-xl flex items-center justify-center mb-5" style="background:rgba(97,82,243,0.15);border:1px solid rgba(124,111,255,0.2)">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <rect x="2" y="2" width="7" height="7" rx="1.5" stroke="#7c6fff" stroke-width="1.5"/>
+              <rect x="11" y="2" width="7" height="7" rx="1.5" stroke="#7c6fff" stroke-width="1.5"/>
+              <rect x="2" y="11" width="7" height="7" rx="1.5" stroke="#7c6fff" stroke-width="1.5"/>
+              <rect x="11" y="11" width="7" height="7" rx="1.5" stroke="#7c6fff" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-white mb-2">AI Infrastructure Advisory</h3>
+          <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.4)">Architecture reviews, training and inference stack design, GPU compute strategy, ML platform buildouts, and LLM deployment planning for enterprise teams.</p>
+        </div>
+
+        <div class="gradient-border rounded-2xl p-7" style="background:#0f0f1a">
+          <div class="w-11 h-11 rounded-xl flex items-center justify-center mb-5" style="background:rgba(97,82,243,0.15);border:1px solid rgba(124,111,255,0.2)">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <circle cx="10" cy="7" r="3.5" stroke="#7c6fff" stroke-width="1.5"/>
+              <path d="M3 17c0-3.314 3.134-6 7-6s7 2.686 7 6" stroke="#7c6fff" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-white mb-2">Fractional CTO / CPO</h3>
+          <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.4)">Embedded executive leadership for early-stage AI teams — owning roadmap, vendor decisions, hiring, and the technical narrative with investors and boards.</p>
+        </div>
+
+        <div class="gradient-border rounded-2xl p-7" style="background:#0f0f1a">
+          <div class="w-11 h-11 rounded-xl flex items-center justify-center mb-5" style="background:rgba(97,82,243,0.15);border:1px solid rgba(124,111,255,0.2)">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M3 14l4-4 3 3 4-5 3 3" stroke="#7c6fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M3 17h14" stroke="#7c6fff" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3 class="text-lg font-semibold text-white mb-2">Investment Advisory</h3>
+          <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.4)">Technical due diligence, portfolio support, and AI infrastructure market maps for venture firms and family offices investing in the AI stack.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Realtime Labs -->
+  <section class="py-24 px-6" style="border-top:1px solid rgba(255,255,255,0.05)">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div>
+          <p class="font-mono text-sm font-medium mb-3" style="color:#7c6fff">Why us</p>
+          <h2 class="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
+            Advice from people who've been in the room.
+          </h2>
+          <p class="leading-relaxed mb-8" style="color:rgba(255,255,255,0.45)">
+            We don't sell frameworks. Realtime Labs brings the judgment that comes from shipping AI infrastructure products inside frontier labs — the hard-won knowledge that never makes it into the docs.
+          </p>
+          <a href="#book" class="inline-flex items-center gap-2 font-medium text-sm transition-colors" style="color:#7c6fff">
+            Let's talk about your stack
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+        <div class="space-y-4">
+          <div class="gradient-border rounded-xl p-5" style="background:#0f0f1a">
+            <div class="flex gap-4 items-start">
+              <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5" style="background:rgba(97,82,243,0.15)">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1v12M1 7h12" stroke="#7c6fff" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </div>
+              <div>
+                <h4 class="font-semibold text-white text-sm mb-1">Frontier AI experience</h4>
+                <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.4)">Built infrastructure products at AI labs operating at the cutting edge of model training, inference, and deployment.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="gradient-border rounded-xl p-5" style="background:#0f0f1a">
+            <div class="flex gap-4 items-start">
+              <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5" style="background:rgba(97,82,243,0.15)">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="5.5" stroke="#7c6fff" stroke-width="1.5"/><path d="M7 4v3l2 2" stroke="#7c6fff" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </div>
+              <div>
+                <h4 class="font-semibold text-white text-sm mb-1">Fast time-to-value</h4>
+                <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.4)">Engagements structured to move at your pace — from a single architecture call to a multi-month embedded advisory.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="gradient-border rounded-xl p-5" style="background:#0f0f1a">
+            <div class="flex gap-4 items-start">
+              <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5" style="background:rgba(97,82,243,0.15)">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7h2l2-4 3 8 2-5 1 2h2" stroke="#7c6fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div>
+                <h4 class="font-semibold text-white text-sm mb-1">Operator perspective</h4>
+                <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.4)">Cross-functional view across product, engineering, and infrastructure — not just one layer of the stack.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Book a Call -->
+  <section id="book" class="py-24 px-6" style="border-top:1px solid rgba(255,255,255,0.05)">
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="font-mono text-sm font-medium mb-3" style="color:#7c6fff">Get started</p>
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Book a free intro call</h2>
+      <p class="mb-12 max-w-lg mx-auto" style="color:rgba(255,255,255,0.45)">30 minutes. No pitch. Tell us what you're building and we'll tell you honestly if and how we can help.</p>
+
+      <div
+        class="calendly-inline-widget glow-sm rounded-2xl overflow-hidden"
+        data-url="https://calendly.com/saneei/30min?hide_gdpr_banner=1&background_color=0f0f1a&text_color=ffffff&primary_color=6152f3"
+        style="min-width:320px;height:700px;"
+      ></div>
+      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-10 px-6" style="border-top:1px solid rgba(255,255,255,0.05)">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2.5">
+        <div class="w-6 h-6 rounded-md flex items-center justify-center" style="background:#6152f3">
+          <svg width="12" height="12" viewBox="0 0 14 14" fill="none">
+            <path d="M2 7L7 2L12 7L7 12L2 7Z" fill="white" opacity="0.9"/>
+            <path d="M4.5 7L7 4.5L9.5 7L7 9.5L4.5 7Z" fill="white"/>
+          </svg>
+        </div>
+        <span class="text-sm font-medium" style="color:rgba(255,255,255,0.5)">Realtime Labs LLC</span>
+      </div>
+      <p class="text-xs" style="color:rgba(255,255,255,0.2)">© 2026 Realtime Labs LLC · San Francisco, CA</p>
+      <a href="mailto:sanee2@gmail.com" class="text-xs transition-colors" style="color:rgba(255,255,255,0.3);">sanee2@gmail.com</a>
+    </div>
+  </footer>
+
+</body>
+</html>

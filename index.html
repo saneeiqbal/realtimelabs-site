@@ -3,35 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Realtime Labs — Boutique Strategy & Advisory for AI Infrastructure</title>
-  <meta name="description" content="Boutique strategy and advisory firm specialized in deep AI infrastructure systems — GPU cloud, datacenters, networking, storage, platform engineering, and commercialization." />
+  <title>Realtime Labs — The Control Plane for Distributed Intelligence</title>
+  <meta name="description" content="Intelligence belongs close to you. Realtime Labs is a boutique strategy and advisory firm specialized in deep AI infrastructure systems — GPU cloud, datacenters, networking, storage, and platform engineering." />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <style>
-    body { font-family: 'Inter', sans-serif; background: #080810; }
-    .glow { box-shadow: 0 0 60px 0 rgba(124, 111, 255, 0.2); }
-    .glow-sm { box-shadow: 0 0 30px 0 rgba(124, 111, 255, 0.1); }
+    body { font-family: 'Inter', sans-serif; background: #0D0D0F; }
+    .glow { box-shadow: 0 0 60px 0 rgba(0, 255, 157, 0.15); }
+    .glow-sm { box-shadow: 0 0 30px 0 rgba(0, 255, 157, 0.08); }
     .gradient-border {
-      background: linear-gradient(#0f0f1a, #0f0f1a) padding-box,
-                  linear-gradient(135deg, rgba(124,111,255,0.4), rgba(97,82,243,0.1)) border-box;
+      background: linear-gradient(#16161A, #16161A) padding-box,
+                  linear-gradient(135deg, rgba(0,255,157,0.35), rgba(0,255,157,0.05)) border-box;
       border: 1px solid transparent;
     }
     .hero-grid {
       background-image:
-        linear-gradient(rgba(124,111,255,0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(124,111,255,0.04) 1px, transparent 1px);
+        linear-gradient(rgba(0,255,157,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,255,157,0.04) 1px, transparent 1px);
       background-size: 60px 60px;
     }
     .text-gradient {
-      background: linear-gradient(135deg, #ffffff 0%, #a8a0ff 60%, #7c6fff 100%);
+      background: linear-gradient(135deg, #ffffff 0%, #a3ffd6 55%, #00FF9D 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
+    .wordmark { font-weight: 500; letter-spacing: -0.01em; }
     .form-input {
-      background: rgba(15,15,26,0.8);
+      background: rgba(22,22,26,0.8);
       border: 1px solid rgba(255,255,255,0.08);
       color: white;
       transition: border-color 0.15s, background 0.15s;
@@ -39,31 +40,56 @@
     .form-input::placeholder { color: rgba(255,255,255,0.3); }
     .form-input:focus {
       outline: none;
-      border-color: rgba(124,111,255,0.5);
-      background: rgba(15,15,26,1);
+      border-color: rgba(0,255,157,0.5);
+      background: rgba(22,22,26,1);
     }
     select.form-input { color: rgba(255,255,255,0.7); }
-    select.form-input option { background: #0f0f1a; color: white; }
+    select.form-input option { background: #16161A; color: white; }
+    @keyframes pulse-ring {
+      0%, 100% { opacity: 0.30; transform: scale(1); }
+      50% { opacity: 0.12; transform: scale(1.08); }
+    }
+    .pulse-ring { transform-origin: center; animation: pulse-ring 4s ease-in-out infinite; }
   </style>
 </head>
 <body class="text-white antialiased">
 
   <!-- Nav -->
-  <nav class="fixed top-0 left-0 right-0 z-50 border-b border-white/5 backdrop-blur-xl" style="background: rgba(8,8,16,0.85)">
+  <nav class="fixed top-0 left-0 right-0 z-50 border-b border-white/5 backdrop-blur-xl" style="background: rgba(13,13,15,0.85)">
     <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
       <a href="/" class="flex items-center gap-2.5">
-        <div class="w-7 h-7 rounded-lg flex items-center justify-center" style="background:#6152f3">
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-            <path d="M2 7L7 2L12 7L7 12L2 7Z" fill="white" opacity="0.9"/>
-            <path d="M4.5 7L7 4.5L9.5 7L7 9.5L4.5 7Z" fill="white"/>
-          </svg>
-        </div>
-        <span class="font-semibold text-white tracking-tight">Realtime Labs</span>
+        <svg width="28" height="28" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle class="pulse-ring" cx="20" cy="20" r="17" stroke="#00FF9D" stroke-width="0.6" opacity="0.3"/>
+          <circle cx="20" cy="20" r="13" stroke="#00FF9D" stroke-width="0.5" opacity="0.22"/>
+          <g fill="#00FF9D">
+            <circle cx="20" cy="3.5" r="1.2"/>
+            <circle cx="32.8" cy="8" r="1.2"/>
+            <circle cx="37" cy="20" r="1.2"/>
+            <circle cx="32.8" cy="32" r="1.2"/>
+            <circle cx="20" cy="36.5" r="1.2"/>
+            <circle cx="7.2" cy="32" r="1.2"/>
+            <circle cx="3" cy="20" r="1.2"/>
+            <circle cx="7.2" cy="8" r="1.2"/>
+          </g>
+          <g stroke="#00FF9D" stroke-width="0.4" opacity="0.45">
+            <line x1="20" y1="3.5" x2="20" y2="14"/>
+            <line x1="32.8" y1="8" x2="24.4" y2="15.6"/>
+            <line x1="37" y1="20" x2="26" y2="20"/>
+            <line x1="32.8" y1="32" x2="24.4" y2="24.4"/>
+            <line x1="20" y1="36.5" x2="20" y2="26"/>
+            <line x1="7.2" y1="32" x2="15.6" y2="24.4"/>
+            <line x1="3" y1="20" x2="14" y2="20"/>
+            <line x1="7.2" y1="8" x2="15.6" y2="15.6"/>
+          </g>
+          <circle cx="20" cy="20" r="6" fill="#0D0D0F" stroke="#00FF9D" stroke-width="0.8"/>
+          <text x="20" y="22.3" font-family="Inter, sans-serif" font-size="6.2" font-weight="500" fill="#00FF9D" text-anchor="middle">rl</text>
+        </svg>
+        <span class="wordmark text-white">realtime labs</span>
       </a>
       <div class="flex items-center gap-6">
-        <a href="/experts.html" class="text-sm font-medium hidden sm:inline-block" style="color:rgba(255,255,255,0.7)">Network</a>
-        <a href="/work.html" class="text-sm font-medium hidden sm:inline-block" style="color:rgba(255,255,255,0.7)">Work</a>
-        <a href="#contact" class="text-sm font-medium px-4 py-2 rounded-lg text-white" style="background:#6152f3">Start an Engagement</a>
+        <a href="/experts.html" class="text-sm font-medium hidden sm:inline-block" style="color:rgba(255,255,255,0.7)">network</a>
+        <a href="/work.html" class="text-sm font-medium hidden sm:inline-block" style="color:rgba(255,255,255,0.7)">work</a>
+        <a href="#contact" class="text-sm font-semibold px-4 py-2 rounded-lg" style="background:#00FF9D;color:#0D0D0F">Start an Engagement</a>
       </div>
     </div>
   </nav>
@@ -71,30 +97,30 @@
   <!-- Hero -->
   <section class="hero-grid relative pt-40 pb-32 px-6 overflow-hidden">
     <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-      <div class="rounded-full blur-[120px]" style="width:600px;height:600px;background:rgba(97,82,243,0.12)"></div>
+      <div class="rounded-full blur-[140px]" style="width:640px;height:640px;background:rgba(0,255,157,0.10)"></div>
     </div>
 
     <div class="max-w-4xl mx-auto text-center relative">
-      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium mb-8 font-mono" style="border:1px solid rgba(124,111,255,0.3);background:rgba(97,82,243,0.1);color:#7c6fff">
-        <span class="w-1.5 h-1.5 rounded-full animate-pulse" style="background:#7c6fff"></span>
-        Boutique Strategy &amp; Advisory · AI Infrastructure
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium mb-8 font-mono" style="border:1px solid rgba(0,255,157,0.3);background:rgba(0,255,157,0.08);color:#00FF9D">
+        <span class="w-1.5 h-1.5 rounded-full animate-pulse" style="background:#00FF9D"></span>
+        The Control Plane for Distributed Intelligence
       </div>
 
       <h1 class="text-5xl md:text-7xl font-bold leading-tight tracking-tight mb-6">
-        <span class="text-gradient">Strategy &amp; advisory</span><br />
-        <span class="text-white">for AI infrastructure.</span>
+        <span class="text-gradient">Intelligence belongs</span><br />
+        <span class="text-white">close to you.</span>
       </h1>
 
-      <p class="text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-10" style="color:rgba(255,255,255,0.5)">
-        Realtime Labs is a boutique firm specialized in deep AI infrastructure systems. We turn operator experience across GPU cloud, datacenters, networking, storage, and platform engineering into strategic guidance for investors, enterprises, and infrastructure companies.
+      <p class="text-lg md:text-xl max-w-2xl mx-auto leading-relaxed mb-10" style="color:rgba(255,255,255,0.55)">
+        Realtime Labs is a boutique strategy and advisory firm specialized in deep AI infrastructure systems. We turn operator experience across GPU cloud, datacenters, networking, storage, and platform engineering into strategic guidance for investors, enterprises, and infrastructure companies.
       </p>
 
       <div class="flex flex-col sm:flex-row gap-3 justify-center">
-        <a href="#contact" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-white duration-200 glow" style="background:#6152f3">
+        <a href="#contact" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold transition-all duration-200 glow" style="background:#00FF9D;color:#0D0D0F">
           Start an Engagement
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
-        <a href="#services" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-medium duration-200" style="border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.6)">
+        <a href="#services" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-medium transition-colors duration-200" style="border:1px solid rgba(255,255,255,0.12);color:rgba(255,255,255,0.7)">
           See what we do
         </a>
       </div>
@@ -104,7 +130,7 @@
   <!-- Problem -->
   <section class="py-24 px-6" style="border-top:1px solid rgba(255,255,255,0.05)">
     <div class="max-w-4xl mx-auto text-center">
-      <p class="font-mono text-sm font-medium mb-3" style="color:#7c6fff">The Problem</p>
+      <p class="font-mono text-sm font-medium mb-3" style="color:#00FF9D">The Problem</p>
       <h2 class="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">GPU availability isn't the bottleneck.</h2>
       <p class="text-lg leading-relaxed" style="color:rgba(255,255,255,0.55)">
         Real outcomes hinge on datacenter readiness, networking, storage, reliability, utilization, workload fit, buyer demand, and the economic envelope around the system. Decisions in this space don't fail for lack of opinion — they fail for lack of operator-grade synthesis. That's what we deliver.
@@ -116,46 +142,46 @@
   <section id="coverage" class="py-24 px-6" style="border-top:1px solid rgba(255,255,255,0.05)">
     <div class="max-w-6xl mx-auto">
       <div class="text-center mb-16">
-        <p class="font-mono text-sm font-medium mb-3" style="color:#7c6fff">Coverage</p>
+        <p class="font-mono text-sm font-medium mb-3" style="color:#00FF9D">Coverage</p>
         <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">The AI infrastructure stack, end to end.</h2>
         <p class="max-w-2xl mx-auto" style="color:rgba(255,255,255,0.5)">Stack-mapped expertise — not generic technology consulting.</p>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="gradient-border rounded-2xl p-6" style="background:#0f0f1a">
-          <p class="font-mono text-xs mb-3" style="color:#7c6fff">01</p>
+        <div class="gradient-border rounded-2xl p-6">
+          <p class="font-mono text-xs mb-3" style="color:#00FF9D">01</p>
           <h3 class="text-lg font-semibold text-white mb-2">Compute &amp; GPU Cloud</h3>
-          <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.45)">GPU capacity, cluster operations, utilization, reliability, workload fit, inference vs training, neocloud economics.</p>
+          <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.5)">GPU capacity, cluster operations, utilization, reliability, workload fit, inference vs training, neocloud economics.</p>
         </div>
 
-        <div class="gradient-border rounded-2xl p-6" style="background:#0f0f1a">
-          <p class="font-mono text-xs mb-3" style="color:#7c6fff">02</p>
+        <div class="gradient-border rounded-2xl p-6">
+          <p class="font-mono text-xs mb-3" style="color:#00FF9D">02</p>
           <h3 class="text-lg font-semibold text-white mb-2">Datacenters &amp; Deployment</h3>
-          <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.45)">Datacenter readiness, MEP design, power, cooling, supply chain, rollout execution, operational risk.</p>
+          <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.5)">Datacenter readiness, MEP design, power, cooling, supply chain, rollout execution, operational risk.</p>
         </div>
 
-        <div class="gradient-border rounded-2xl p-6" style="background:#0f0f1a">
-          <p class="font-mono text-xs mb-3" style="color:#7c6fff">03</p>
+        <div class="gradient-border rounded-2xl p-6">
+          <p class="font-mono text-xs mb-3" style="color:#00FF9D">03</p>
           <h3 class="text-lg font-semibold text-white mb-2">Networking &amp; Interconnect</h3>
-          <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.45)">Cloud connectivity, private links, multicloud networking, AI cluster networking, latency-sensitive architecture.</p>
+          <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.5)">Cloud connectivity, private links, multicloud networking, AI cluster networking, latency-sensitive architecture.</p>
         </div>
 
-        <div class="gradient-border rounded-2xl p-6" style="background:#0f0f1a">
-          <p class="font-mono text-xs mb-3" style="color:#7c6fff">04</p>
+        <div class="gradient-border rounded-2xl p-6">
+          <p class="font-mono text-xs mb-3" style="color:#00FF9D">04</p>
           <h3 class="text-lg font-semibold text-white mb-2">Storage &amp; Data Infrastructure</h3>
-          <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.45)">Object storage, file systems, data movement, AI workload storage patterns, enterprise requirements.</p>
+          <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.5)">Object storage, file systems, data movement, AI workload storage patterns, enterprise requirements.</p>
         </div>
 
-        <div class="gradient-border rounded-2xl p-6" style="background:#0f0f1a">
-          <p class="font-mono text-xs mb-3" style="color:#7c6fff">05</p>
+        <div class="gradient-border rounded-2xl p-6">
+          <p class="font-mono text-xs mb-3" style="color:#00FF9D">05</p>
           <h3 class="text-lg font-semibold text-white mb-2">Platform Engineering</h3>
-          <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.45)">Kubernetes, internal developer platforms, DevOps, platform team maturity, cloud-native transformation.</p>
+          <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.5)">Kubernetes, internal developer platforms, DevOps, platform team maturity, cloud-native transformation.</p>
         </div>
 
-        <div class="gradient-border rounded-2xl p-6" style="background:#0f0f1a">
-          <p class="font-mono text-xs mb-3" style="color:#7c6fff">06</p>
+        <div class="gradient-border rounded-2xl p-6">
+          <p class="font-mono text-xs mb-3" style="color:#00FF9D">06</p>
           <h3 class="text-lg font-semibold text-white mb-2">GTM &amp; Commercial Strategy</h3>
-          <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.45)">Buyer segmentation, packaging, pricing, sales motion, enterprise objections, competitive positioning.</p>
+          <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.5)">Buyer segmentation, packaging, pricing, sales motion, enterprise objections, competitive positioning.</p>
         </div>
       </div>
     </div>
@@ -165,54 +191,54 @@
   <section id="services" class="py-24 px-6" style="border-top:1px solid rgba(255,255,255,0.05)">
     <div class="max-w-6xl mx-auto">
       <div class="text-center mb-16">
-        <p class="font-mono text-sm font-medium mb-3" style="color:#7c6fff">How We Engage</p>
+        <p class="font-mono text-sm font-medium mb-3" style="color:#00FF9D">How We Engage</p>
         <h2 class="text-3xl md:text-4xl font-bold text-white">Three ways to work with us</h2>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-        <div class="gradient-border rounded-2xl p-7" style="background:#0f0f1a">
-          <div class="w-11 h-11 rounded-xl flex items-center justify-center mb-5" style="background:rgba(97,82,243,0.15);border:1px solid rgba(124,111,255,0.2)">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 3h9l3 3v11H4z" stroke="#7c6fff" stroke-width="1.5" stroke-linejoin="round"/><path d="M13 3v3h3M7 10h6M7 13h6M7 7h3" stroke="#7c6fff" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <div class="gradient-border rounded-2xl p-7">
+          <div class="w-11 h-11 rounded-xl flex items-center justify-center mb-5" style="background:rgba(0,255,157,0.10);border:1px solid rgba(0,255,157,0.25)">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 3h9l3 3v11H4z" stroke="#00FF9D" stroke-width="1.5" stroke-linejoin="round"/><path d="M13 3v3h3M7 10h6M7 13h6M7 7h3" stroke="#00FF9D" stroke-width="1.5" stroke-linecap="round"/></svg>
           </div>
           <h3 class="text-lg font-semibold text-white mb-2">Diligence &amp; Strategy</h3>
-          <p class="text-sm leading-relaxed mb-4" style="color:rgba(255,255,255,0.5)">Strategic deliverables grounded in operator experience. Synthesis you can hand to a partner, a board, or an IC.</p>
-          <ul class="space-y-2 text-sm" style="color:rgba(255,255,255,0.45)">
-            <li class="flex gap-2"><span style="color:#7c6fff">›</span> Investment thesis stress tests</li>
-            <li class="flex gap-2"><span style="color:#7c6fff">›</span> Technical due-diligence memos</li>
-            <li class="flex gap-2"><span style="color:#7c6fff">›</span> Market &amp; competitor maps</li>
-            <li class="flex gap-2"><span style="color:#7c6fff">›</span> Vendor &amp; product scorecards</li>
-            <li class="flex gap-2"><span style="color:#7c6fff">›</span> Customer-discovery sprints</li>
+          <p class="text-sm leading-relaxed mb-4" style="color:rgba(255,255,255,0.55)">Strategic deliverables grounded in operator experience. Synthesis you can hand to a partner, a board, or an IC.</p>
+          <ul class="space-y-2 text-sm" style="color:rgba(255,255,255,0.5)">
+            <li class="flex gap-2"><span style="color:#00FF9D">›</span> Investment thesis stress tests</li>
+            <li class="flex gap-2"><span style="color:#00FF9D">›</span> Technical due-diligence memos</li>
+            <li class="flex gap-2"><span style="color:#00FF9D">›</span> Market &amp; competitor maps</li>
+            <li class="flex gap-2"><span style="color:#00FF9D">›</span> Vendor &amp; product scorecards</li>
+            <li class="flex gap-2"><span style="color:#00FF9D">›</span> Customer-discovery sprints</li>
           </ul>
         </div>
 
-        <div class="gradient-border rounded-2xl p-7" style="background:#0f0f1a">
-          <div class="w-11 h-11 rounded-xl flex items-center justify-center mb-5" style="background:rgba(97,82,243,0.15);border:1px solid rgba(124,111,255,0.2)">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 17l4-4 3 3 7-8" stroke="#7c6fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 8h4v4" stroke="#7c6fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <div class="gradient-border rounded-2xl p-7">
+          <div class="w-11 h-11 rounded-xl flex items-center justify-center mb-5" style="background:rgba(0,255,157,0.10);border:1px solid rgba(0,255,157,0.25)">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M3 17l4-4 3 3 7-8" stroke="#00FF9D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 8h4v4" stroke="#00FF9D" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </div>
           <h3 class="text-lg font-semibold text-white mb-2">Advisory Engagements</h3>
-          <p class="text-sm leading-relaxed mb-4" style="color:rgba(255,255,255,0.5)">Embedded strategic work for operators, founders, and investment teams. Defined scope, written outputs.</p>
-          <ul class="space-y-2 text-sm" style="color:rgba(255,255,255,0.45)">
-            <li class="flex gap-2"><span style="color:#7c6fff">›</span> Product strategy review</li>
-            <li class="flex gap-2"><span style="color:#7c6fff">›</span> GTM &amp; pricing teardowns</li>
-            <li class="flex gap-2"><span style="color:#7c6fff">›</span> Architecture review</li>
-            <li class="flex gap-2"><span style="color:#7c6fff">›</span> Board &amp; investor narrative support</li>
-            <li class="flex gap-2"><span style="color:#7c6fff">›</span> Fractional CTO / CPO</li>
+          <p class="text-sm leading-relaxed mb-4" style="color:rgba(255,255,255,0.55)">Embedded strategic work for operators, founders, and investment teams. Defined scope, written outputs.</p>
+          <ul class="space-y-2 text-sm" style="color:rgba(255,255,255,0.5)">
+            <li class="flex gap-2"><span style="color:#00FF9D">›</span> Product strategy review</li>
+            <li class="flex gap-2"><span style="color:#00FF9D">›</span> GTM &amp; pricing teardowns</li>
+            <li class="flex gap-2"><span style="color:#00FF9D">›</span> Architecture review</li>
+            <li class="flex gap-2"><span style="color:#00FF9D">›</span> Board &amp; investor narrative support</li>
+            <li class="flex gap-2"><span style="color:#00FF9D">›</span> Fractional CTO / CPO</li>
           </ul>
         </div>
 
-        <div class="gradient-border rounded-2xl p-7" style="background:#0f0f1a">
-          <div class="w-11 h-11 rounded-xl flex items-center justify-center mb-5" style="background:rgba(97,82,243,0.15);border:1px solid rgba(124,111,255,0.2)">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="#7c6fff" stroke-width="1.5"/><path d="M10 6v4l2.5 2.5" stroke="#7c6fff" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <div class="gradient-border rounded-2xl p-7">
+          <div class="w-11 h-11 rounded-xl flex items-center justify-center mb-5" style="background:rgba(0,255,157,0.10);border:1px solid rgba(0,255,157,0.25)">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="7" stroke="#00FF9D" stroke-width="1.5"/><path d="M10 6v4l2.5 2.5" stroke="#00FF9D" stroke-width="1.5" stroke-linecap="round"/></svg>
           </div>
           <h3 class="text-lg font-semibold text-white mb-2">Consulting Retainer</h3>
-          <p class="text-sm leading-relaxed mb-4" style="color:rgba(255,255,255,0.5)">Ongoing access to our advisory, network, and synthesis. For funds and operators making continuous infrastructure decisions.</p>
-          <ul class="space-y-2 text-sm" style="color:rgba(255,255,255,0.45)">
-            <li class="flex gap-2"><span style="color:#7c6fff">›</span> Monthly advisory access</li>
-            <li class="flex gap-2"><span style="color:#7c6fff">›</span> Standing diligence panel</li>
-            <li class="flex gap-2"><span style="color:#7c6fff">›</span> Direct network access</li>
-            <li class="flex gap-2"><span style="color:#7c6fff">›</span> Strategic review cadence</li>
-            <li class="flex gap-2"><span style="color:#7c6fff">›</span> On-demand expert calls</li>
+          <p class="text-sm leading-relaxed mb-4" style="color:rgba(255,255,255,0.55)">Ongoing access to our advisory, network, and synthesis. For funds and operators making continuous infrastructure decisions.</p>
+          <ul class="space-y-2 text-sm" style="color:rgba(255,255,255,0.5)">
+            <li class="flex gap-2"><span style="color:#00FF9D">›</span> Monthly advisory access</li>
+            <li class="flex gap-2"><span style="color:#00FF9D">›</span> Standing diligence panel</li>
+            <li class="flex gap-2"><span style="color:#00FF9D">›</span> Direct network access</li>
+            <li class="flex gap-2"><span style="color:#00FF9D">›</span> Strategic review cadence</li>
+            <li class="flex gap-2"><span style="color:#00FF9D">›</span> On-demand expert calls</li>
           </ul>
         </div>
 
@@ -225,44 +251,44 @@
     <div class="max-w-6xl mx-auto">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         <div>
-          <p class="font-mono text-sm font-medium mb-3" style="color:#7c6fff">Our Network</p>
+          <p class="font-mono text-sm font-medium mb-3" style="color:#00FF9D">Our Network</p>
           <h2 class="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">Operator-led advisory.</h2>
-          <p class="leading-relaxed mb-6" style="color:rgba(255,255,255,0.5)">
+          <p class="leading-relaxed mb-6" style="color:rgba(255,255,255,0.55)">
             Realtime Labs is built on a network of senior operators across the AI infrastructure stack. Their judgment shapes our strategic work; their direct insight feeds our diligence and advisory. We don't broker calls — we advise.
           </p>
-          <p class="leading-relaxed mb-8" style="color:rgba(255,255,255,0.5)">
+          <p class="leading-relaxed mb-8" style="color:rgba(255,255,255,0.55)">
             Network profiles are anonymized to protect current-employer confidentiality. Every engagement runs through conflict screens, written briefings, and a final strategic deliverable.
           </p>
-          <a href="/experts.html" class="inline-flex items-center gap-2 font-medium text-sm" style="color:#7c6fff">
+          <a href="/experts.html" class="inline-flex items-center gap-2 font-medium text-sm" style="color:#00FF9D">
             See our network coverage
             <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
         </div>
 
         <div class="space-y-3">
-          <div class="rounded-xl p-4 flex items-center gap-4" style="background:#0f0f1a;border:1px solid rgba(255,255,255,0.05)">
-            <span class="font-mono text-xs px-2 py-1 rounded" style="background:rgba(97,82,243,0.15);color:#7c6fff">A</span>
-            <span class="text-sm" style="color:rgba(255,255,255,0.7)">AI Infrastructure Product &amp; Datacenter Strategy</span>
+          <div class="rounded-xl p-4 flex items-center gap-4" style="background:#16161A;border:1px solid rgba(255,255,255,0.05)">
+            <span class="font-mono text-xs px-2 py-1 rounded" style="background:rgba(0,255,157,0.12);color:#00FF9D">A</span>
+            <span class="text-sm" style="color:rgba(255,255,255,0.75)">AI Infrastructure Product &amp; Datacenter Strategy</span>
           </div>
-          <div class="rounded-xl p-4 flex items-center gap-4" style="background:#0f0f1a;border:1px solid rgba(255,255,255,0.05)">
-            <span class="font-mono text-xs px-2 py-1 rounded" style="background:rgba(97,82,243,0.15);color:#7c6fff">B</span>
-            <span class="text-sm" style="color:rgba(255,255,255,0.7)">Cloud-Native Platform &amp; Engineering Transformation</span>
+          <div class="rounded-xl p-4 flex items-center gap-4" style="background:#16161A;border:1px solid rgba(255,255,255,0.05)">
+            <span class="font-mono text-xs px-2 py-1 rounded" style="background:rgba(0,255,157,0.12);color:#00FF9D">B</span>
+            <span class="text-sm" style="color:rgba(255,255,255,0.75)">Cloud-Native Platform &amp; Engineering Transformation</span>
           </div>
-          <div class="rounded-xl p-4 flex items-center gap-4" style="background:#0f0f1a;border:1px solid rgba(255,255,255,0.05)">
-            <span class="font-mono text-xs px-2 py-1 rounded" style="background:rgba(97,82,243,0.15);color:#7c6fff">C</span>
-            <span class="text-sm" style="color:rgba(255,255,255,0.7)">Datacenter, MEP &amp; GPU Cluster Programs</span>
+          <div class="rounded-xl p-4 flex items-center gap-4" style="background:#16161A;border:1px solid rgba(255,255,255,0.05)">
+            <span class="font-mono text-xs px-2 py-1 rounded" style="background:rgba(0,255,157,0.12);color:#00FF9D">C</span>
+            <span class="text-sm" style="color:rgba(255,255,255,0.75)">Datacenter, MEP &amp; GPU Cluster Programs</span>
           </div>
-          <div class="rounded-xl p-4 flex items-center gap-4" style="background:#0f0f1a;border:1px solid rgba(255,255,255,0.05)">
-            <span class="font-mono text-xs px-2 py-1 rounded" style="background:rgba(97,82,243,0.15);color:#7c6fff">D</span>
-            <span class="text-sm" style="color:rgba(255,255,255,0.7)">Cloud Networking &amp; AI Infrastructure Software</span>
+          <div class="rounded-xl p-4 flex items-center gap-4" style="background:#16161A;border:1px solid rgba(255,255,255,0.05)">
+            <span class="font-mono text-xs px-2 py-1 rounded" style="background:rgba(0,255,157,0.12);color:#00FF9D">D</span>
+            <span class="text-sm" style="color:rgba(255,255,255,0.75)">Cloud Networking &amp; AI Infrastructure Software</span>
           </div>
-          <div class="rounded-xl p-4 flex items-center gap-4" style="background:#0f0f1a;border:1px solid rgba(255,255,255,0.05)">
-            <span class="font-mono text-xs px-2 py-1 rounded" style="background:rgba(97,82,243,0.15);color:#7c6fff">E</span>
-            <span class="text-sm" style="color:rgba(255,255,255,0.7)">Sovereign Compute &amp; Commercial Strategy</span>
+          <div class="rounded-xl p-4 flex items-center gap-4" style="background:#16161A;border:1px solid rgba(255,255,255,0.05)">
+            <span class="font-mono text-xs px-2 py-1 rounded" style="background:rgba(0,255,157,0.12);color:#00FF9D">E</span>
+            <span class="text-sm" style="color:rgba(255,255,255,0.75)">Sovereign Compute &amp; Commercial Strategy</span>
           </div>
-          <div class="rounded-xl p-4 flex items-center gap-4" style="background:#0f0f1a;border:1px solid rgba(255,255,255,0.05)">
-            <span class="font-mono text-xs px-2 py-1 rounded" style="background:rgba(97,82,243,0.15);color:#7c6fff">F</span>
-            <span class="text-sm" style="color:rgba(255,255,255,0.7)">Compute Capacity &amp; Strategy</span>
+          <div class="rounded-xl p-4 flex items-center gap-4" style="background:#16161A;border:1px solid rgba(255,255,255,0.05)">
+            <span class="font-mono text-xs px-2 py-1 rounded" style="background:rgba(0,255,157,0.12);color:#00FF9D">F</span>
+            <span class="text-sm" style="color:rgba(255,255,255,0.75)">Compute Capacity &amp; Strategy</span>
           </div>
         </div>
       </div>
@@ -273,21 +299,21 @@
   <section class="py-24 px-6" style="border-top:1px solid rgba(255,255,255,0.05)">
     <div class="max-w-5xl mx-auto">
       <div class="text-center mb-12">
-        <p class="font-mono text-sm font-medium mb-3" style="color:#7c6fff">Why Realtime Labs</p>
+        <p class="font-mono text-sm font-medium mb-3" style="color:#00FF9D">Why Realtime Labs</p>
         <h2 class="text-3xl md:text-4xl font-bold text-white">Independent. Operator-led. Synthesis-first.</h2>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="rounded-xl p-6" style="background:#0f0f1a;border:1px solid rgba(255,255,255,0.05)">
+        <div class="rounded-xl p-6" style="background:#16161A;border:1px solid rgba(255,255,255,0.05)">
           <h3 class="font-semibold text-white mb-2">Independent</h3>
-          <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.45)">No reseller relationships, no vendor revenue, no kickbacks. Our incentive is your decision, not anyone's quota.</p>
+          <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.5)">No reseller relationships, no vendor revenue, no kickbacks. Our incentive is your decision, not anyone's quota.</p>
         </div>
-        <div class="rounded-xl p-6" style="background:#0f0f1a;border:1px solid rgba(255,255,255,0.05)">
+        <div class="rounded-xl p-6" style="background:#16161A;border:1px solid rgba(255,255,255,0.05)">
           <h3 class="font-semibold text-white mb-2">Operator-led</h3>
-          <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.45)">Our advisors built and ran the systems they advise on — not analysts who only read about them.</p>
+          <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.5)">Our advisors built and ran the systems they advise on — not analysts who only read about them.</p>
         </div>
-        <div class="rounded-xl p-6" style="background:#0f0f1a;border:1px solid rgba(255,255,255,0.05)">
+        <div class="rounded-xl p-6" style="background:#16161A;border:1px solid rgba(255,255,255,0.05)">
           <h3 class="font-semibold text-white mb-2">Synthesis-first</h3>
-          <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.45)">Every engagement produces a written deliverable — a memo, a map, a scorecard. We sell judgment, not transcripts.</p>
+          <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.5)">Every engagement produces a written deliverable — a memo, a map, a scorecard. We sell judgment, not transcripts.</p>
         </div>
       </div>
     </div>
@@ -297,21 +323,21 @@
   <section class="py-24 px-6" style="border-top:1px solid rgba(255,255,255,0.05)">
     <div class="max-w-5xl mx-auto">
       <div class="text-center mb-12">
-        <p class="font-mono text-sm font-medium mb-3" style="color:#7c6fff">Who We Work With</p>
+        <p class="font-mono text-sm font-medium mb-3" style="color:#00FF9D">Who We Work With</p>
         <h2 class="text-3xl md:text-4xl font-bold text-white">Built for the people underwriting AI infrastructure.</h2>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="gradient-border rounded-xl p-6" style="background:#0f0f1a">
+        <div class="gradient-border rounded-xl p-6">
           <h3 class="font-semibold text-white mb-2">Investors</h3>
-          <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.45)">VC, growth, PE, and family offices underwriting GPU clouds, neoclouds, datacenters, infrastructure software, and AI platform companies.</p>
+          <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.5)">VC, growth, PE, and family offices underwriting GPU clouds, neoclouds, datacenters, infrastructure software, and AI platform companies.</p>
         </div>
-        <div class="gradient-border rounded-xl p-6" style="background:#0f0f1a">
+        <div class="gradient-border rounded-xl p-6">
           <h3 class="font-semibold text-white mb-2">Operators</h3>
-          <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.45)">AI infrastructure startups, cloud providers, and enterprise platform teams making product, GTM, and architecture decisions under pressure.</p>
+          <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.5)">AI infrastructure startups, cloud providers, and enterprise platform teams making product, GTM, and architecture decisions under pressure.</p>
         </div>
-        <div class="gradient-border rounded-xl p-6" style="background:#0f0f1a">
+        <div class="gradient-border rounded-xl p-6">
           <h3 class="font-semibold text-white mb-2">Enterprises</h3>
-          <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.45)">Buyers evaluating GPU cloud providers, vendor stacks, build-vs-buy options, and the operational realities of running AI in production.</p>
+          <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.5)">Buyers evaluating GPU cloud providers, vendor stacks, build-vs-buy options, and the operational realities of running AI in production.</p>
         </div>
       </div>
     </div>
@@ -321,12 +347,12 @@
   <section id="contact" class="py-24 px-6" style="border-top:1px solid rgba(255,255,255,0.05)">
     <div class="max-w-2xl mx-auto">
       <div class="text-center mb-12">
-        <p class="font-mono text-sm font-medium mb-3" style="color:#7c6fff">Get started</p>
+        <p class="font-mono text-sm font-medium mb-3" style="color:#00FF9D">Get started</p>
         <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Tell us what you're working on</h2>
-        <p class="max-w-lg mx-auto" style="color:rgba(255,255,255,0.5)">A few details so we can route you to the right experts and follow up with next steps.</p>
+        <p class="max-w-lg mx-auto" style="color:rgba(255,255,255,0.55)">A few details so we can route you to the right experts and follow up with next steps.</p>
       </div>
 
-      <form action="https://formsubmit.co/website@realtimelabs.io" method="POST" class="gradient-border rounded-2xl p-7 md:p-8 space-y-5 glow-sm" style="background:#0f0f1a">
+      <form action="https://formsubmit.co/website@realtimelabs.io" method="POST" class="gradient-border rounded-2xl p-7 md:p-8 space-y-5 glow-sm">
         <input type="hidden" name="_subject" value="New Realtime Labs inquiry" />
         <input type="hidden" name="_captcha" value="false" />
         <input type="hidden" name="_template" value="table" />
@@ -335,22 +361,22 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
           <div>
-            <label class="block font-mono text-xs mb-2" style="color:#7c6fff">NAME</label>
+            <label class="block font-mono text-xs mb-2" style="color:#00FF9D">NAME</label>
             <input type="text" name="name" required class="form-input w-full px-4 py-3 rounded-lg text-sm" placeholder="Your name" />
           </div>
           <div>
-            <label class="block font-mono text-xs mb-2" style="color:#7c6fff">EMAIL</label>
+            <label class="block font-mono text-xs mb-2" style="color:#00FF9D">EMAIL</label>
             <input type="email" name="email" required class="form-input w-full px-4 py-3 rounded-lg text-sm" placeholder="you@company.com" />
           </div>
         </div>
 
         <div>
-          <label class="block font-mono text-xs mb-2" style="color:#7c6fff">COMPANY / ORGANIZATION</label>
+          <label class="block font-mono text-xs mb-2" style="color:#00FF9D">COMPANY / ORGANIZATION</label>
           <input type="text" name="company" class="form-input w-full px-4 py-3 rounded-lg text-sm" placeholder="Optional" />
         </div>
 
         <div>
-          <label class="block font-mono text-xs mb-2" style="color:#7c6fff">ENGAGEMENT TYPE</label>
+          <label class="block font-mono text-xs mb-2" style="color:#00FF9D">ENGAGEMENT TYPE</label>
           <select name="engagement_type" required class="form-input w-full px-4 py-3 rounded-lg text-sm">
             <option value="">Pick one…</option>
             <option>Diligence &amp; Strategy</option>
@@ -361,16 +387,16 @@
         </div>
 
         <div>
-          <label class="block font-mono text-xs mb-2" style="color:#7c6fff">WHAT ARE YOU WORKING ON OR EVALUATING?</label>
+          <label class="block font-mono text-xs mb-2" style="color:#00FF9D">WHAT ARE YOU WORKING ON OR EVALUATING?</label>
           <textarea name="context" required rows="5" class="form-input w-full px-4 py-3 rounded-lg text-sm" placeholder="A few sentences on what you're underwriting, building, or evaluating — and what you'd want out of an engagement."></textarea>
         </div>
 
-        <button type="submit" class="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-white duration-200 glow" style="background:#6152f3">
+        <button type="submit" class="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-semibold transition-all duration-200 glow" style="background:#00FF9D;color:#0D0D0F">
           Send
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
 
-        <p class="text-xs text-center" style="color:rgba(255,255,255,0.3)">Your details go straight to our inbox. We typically respond within 1 business day.</p>
+        <p class="text-xs text-center" style="color:rgba(255,255,255,0.35)">Your details go straight to our inbox. We typically respond within 1 business day.</p>
       </form>
     </div>
   </section>
@@ -379,16 +405,25 @@
   <footer class="py-10 px-6" style="border-top:1px solid rgba(255,255,255,0.05)">
     <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
       <div class="flex items-center gap-2.5">
-        <div class="w-6 h-6 rounded-md flex items-center justify-center" style="background:#6152f3">
-          <svg width="12" height="12" viewBox="0 0 14 14" fill="none">
-            <path d="M2 7L7 2L12 7L7 12L2 7Z" fill="white" opacity="0.9"/>
-            <path d="M4.5 7L7 4.5L9.5 7L7 9.5L4.5 7Z" fill="white"/>
-          </svg>
-        </div>
-        <span class="text-sm font-medium" style="color:rgba(255,255,255,0.5)">Realtime Labs LLC</span>
+        <svg width="20" height="20" viewBox="0 0 40 40" fill="none">
+          <circle cx="20" cy="20" r="16" stroke="#00FF9D" stroke-width="0.6" opacity="0.3"/>
+          <g fill="#00FF9D">
+            <circle cx="20" cy="5" r="1"/>
+            <circle cx="32" cy="9" r="1"/>
+            <circle cx="35" cy="20" r="1"/>
+            <circle cx="32" cy="31" r="1"/>
+            <circle cx="20" cy="35" r="1"/>
+            <circle cx="8" cy="31" r="1"/>
+            <circle cx="5" cy="20" r="1"/>
+            <circle cx="8" cy="9" r="1"/>
+          </g>
+          <circle cx="20" cy="20" r="5.5" fill="#0D0D0F" stroke="#00FF9D" stroke-width="0.7"/>
+          <text x="20" y="22" font-family="Inter, sans-serif" font-size="5.5" font-weight="500" fill="#00FF9D" text-anchor="middle">rl</text>
+        </svg>
+        <span class="wordmark text-sm" style="color:rgba(255,255,255,0.55)">realtime labs llc</span>
       </div>
-      <p class="text-xs" style="color:rgba(255,255,255,0.2)">© 2026 Realtime Labs LLC · San Francisco, CA</p>
-      <a href="mailto:website@realtimelabs.io" class="text-xs" style="color:rgba(255,255,255,0.3)">website@realtimelabs.io</a>
+      <p class="text-xs" style="color:rgba(255,255,255,0.25)">© 2026 Realtime Labs LLC · San Francisco, CA · Intelligence belongs close to you</p>
+      <a href="mailto:website@realtimelabs.io" class="text-xs" style="color:rgba(255,255,255,0.35)">website@realtimelabs.io</a>
     </div>
   </footer>
 

@@ -10,46 +10,72 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <style>
-    body { font-family: 'Inter', sans-serif; background: #080810; }
-    .glow { box-shadow: 0 0 60px 0 rgba(124, 111, 255, 0.2); }
+    body { font-family: 'Inter', sans-serif; background: #0D0D0F; }
+    .glow { box-shadow: 0 0 60px 0 rgba(0, 255, 157, 0.15); }
     .gradient-border {
-      background: linear-gradient(#0f0f1a, #0f0f1a) padding-box,
-                  linear-gradient(135deg, rgba(124,111,255,0.4), rgba(97,82,243,0.1)) border-box;
+      background: linear-gradient(#16161A, #16161A) padding-box,
+                  linear-gradient(135deg, rgba(0,255,157,0.35), rgba(0,255,157,0.05)) border-box;
       border: 1px solid transparent;
     }
     .hero-grid {
       background-image:
-        linear-gradient(rgba(124,111,255,0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(124,111,255,0.04) 1px, transparent 1px);
+        linear-gradient(rgba(0,255,157,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,255,157,0.04) 1px, transparent 1px);
       background-size: 60px 60px;
     }
     .text-gradient {
-      background: linear-gradient(135deg, #ffffff 0%, #a8a0ff 60%, #7c6fff 100%);
+      background: linear-gradient(135deg, #ffffff 0%, #a3ffd6 55%, #00FF9D 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
+    .wordmark { font-weight: 500; letter-spacing: -0.01em; }
     .case-num { font-family: 'JetBrains Mono', monospace; }
+    @keyframes pulse-ring {
+      0%, 100% { opacity: 0.30; transform: scale(1); }
+      50% { opacity: 0.12; transform: scale(1.08); }
+    }
+    .pulse-ring { transform-origin: center; animation: pulse-ring 4s ease-in-out infinite; }
   </style>
 </head>
 <body class="text-white antialiased">
 
   <!-- Nav -->
-  <nav class="fixed top-0 left-0 right-0 z-50 border-b border-white/5 backdrop-blur-xl" style="background: rgba(8,8,16,0.85)">
+  <nav class="fixed top-0 left-0 right-0 z-50 border-b border-white/5 backdrop-blur-xl" style="background: rgba(13,13,15,0.85)">
     <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
       <a href="/" class="flex items-center gap-2.5">
-        <div class="w-7 h-7 rounded-lg flex items-center justify-center" style="background:#6152f3">
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-            <path d="M2 7L7 2L12 7L7 12L2 7Z" fill="white" opacity="0.9"/>
-            <path d="M4.5 7L7 4.5L9.5 7L7 9.5L4.5 7Z" fill="white"/>
-          </svg>
-        </div>
-        <span class="font-semibold text-white tracking-tight">Realtime Labs</span>
+        <svg width="28" height="28" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle class="pulse-ring" cx="20" cy="20" r="17" stroke="#00FF9D" stroke-width="0.6" opacity="0.3"/>
+          <circle cx="20" cy="20" r="13" stroke="#00FF9D" stroke-width="0.5" opacity="0.22"/>
+          <g fill="#00FF9D">
+            <circle cx="20" cy="3.5" r="1.2"/>
+            <circle cx="32.8" cy="8" r="1.2"/>
+            <circle cx="37" cy="20" r="1.2"/>
+            <circle cx="32.8" cy="32" r="1.2"/>
+            <circle cx="20" cy="36.5" r="1.2"/>
+            <circle cx="7.2" cy="32" r="1.2"/>
+            <circle cx="3" cy="20" r="1.2"/>
+            <circle cx="7.2" cy="8" r="1.2"/>
+          </g>
+          <g stroke="#00FF9D" stroke-width="0.4" opacity="0.45">
+            <line x1="20" y1="3.5" x2="20" y2="14"/>
+            <line x1="32.8" y1="8" x2="24.4" y2="15.6"/>
+            <line x1="37" y1="20" x2="26" y2="20"/>
+            <line x1="32.8" y1="32" x2="24.4" y2="24.4"/>
+            <line x1="20" y1="36.5" x2="20" y2="26"/>
+            <line x1="7.2" y1="32" x2="15.6" y2="24.4"/>
+            <line x1="3" y1="20" x2="14" y2="20"/>
+            <line x1="7.2" y1="8" x2="15.6" y2="15.6"/>
+          </g>
+          <circle cx="20" cy="20" r="6" fill="#0D0D0F" stroke="#00FF9D" stroke-width="0.8"/>
+          <text x="20" y="22.3" font-family="Inter, sans-serif" font-size="6.2" font-weight="500" fill="#00FF9D" text-anchor="middle">rl</text>
+        </svg>
+        <span class="wordmark text-white">realtime labs</span>
       </a>
       <div class="flex items-center gap-6">
-        <a href="/experts.html" class="text-sm font-medium hidden sm:inline-block" style="color:rgba(255,255,255,0.7)">Network</a>
-        <a href="/work.html" class="text-sm font-medium hidden sm:inline-block" style="color:#7c6fff">Work</a>
-        <a href="/#contact" class="text-sm font-medium px-4 py-2 rounded-lg text-white" style="background:#6152f3">Start an Engagement</a>
+        <a href="/experts.html" class="text-sm font-medium hidden sm:inline-block" style="color:rgba(255,255,255,0.7)">network</a>
+        <a href="/work.html" class="text-sm font-medium hidden sm:inline-block" style="color:#00FF9D">work</a>
+        <a href="/#contact" class="text-sm font-semibold px-4 py-2 rounded-lg" style="background:#00FF9D;color:#0D0D0F">Start an Engagement</a>
       </div>
     </div>
   </nav>
@@ -57,12 +83,12 @@
   <!-- Hero -->
   <section class="hero-grid relative pt-40 pb-20 px-6 overflow-hidden">
     <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-      <div class="rounded-full blur-[120px]" style="width:500px;height:500px;background:rgba(97,82,243,0.10)"></div>
+      <div class="rounded-full blur-[120px]" style="width:520px;height:520px;background:rgba(0,255,157,0.08)"></div>
     </div>
 
     <div class="max-w-4xl mx-auto text-center relative">
-      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium mb-8 font-mono" style="border:1px solid rgba(124,111,255,0.3);background:rgba(97,82,243,0.1);color:#7c6fff">
-        <span class="w-1.5 h-1.5 rounded-full" style="background:#7c6fff"></span>
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium mb-8 font-mono" style="border:1px solid rgba(0,255,157,0.3);background:rgba(0,255,157,0.08);color:#00FF9D">
+        <span class="w-1.5 h-1.5 rounded-full" style="background:#00FF9D"></span>
         Selected Engagements
       </div>
 
@@ -71,7 +97,7 @@
         <span class="text-white">Shipped solutions.</span>
       </h1>
 
-      <p class="text-lg max-w-2xl mx-auto leading-relaxed" style="color:rgba(255,255,255,0.5)">
+      <p class="text-lg max-w-2xl mx-auto leading-relaxed" style="color:rgba(255,255,255,0.55)">
         A sample of work behind Realtime Labs — anonymized to respect client confidentiality. Numbers are directional; the patterns are real.
       </p>
     </div>
@@ -82,101 +108,101 @@
     <div class="max-w-5xl mx-auto space-y-6">
 
       <!-- Case 01 -->
-      <div class="gradient-border rounded-2xl p-8 md:p-10" style="background:#0f0f1a">
+      <div class="gradient-border rounded-2xl p-8 md:p-10">
         <div class="flex items-center gap-3 mb-5">
-          <span class="case-num text-xs" style="color:#7c6fff">01 / Cluster Operations</span>
-          <span class="text-xs px-2 py-0.5 rounded-full" style="background:rgba(97,82,243,0.15);color:rgba(255,255,255,0.6)">Prior neocloud</span>
+          <span class="case-num text-xs" style="color:#00FF9D">01 / Cluster Operations</span>
+          <span class="text-xs px-2 py-0.5 rounded-full" style="background:rgba(0,255,157,0.12);color:rgba(255,255,255,0.65)">Prior neocloud</span>
         </div>
         <h2 class="text-2xl md:text-3xl font-bold text-white mb-4 leading-tight">
           Standing up a 4,000-GPU production cluster on a hard revenue deadline.
         </h2>
         <div class="grid md:grid-cols-3 gap-6 mt-6">
           <div>
-            <p class="font-mono text-xs mb-2" style="color:#7c6fff">SITUATION</p>
-            <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.55)">A stealth neocloud needed to bring its first H100 cluster online to hit a contractual revenue milestone — 50 staff across 10 teams, no shared deployment playbook, no production track record.</p>
+            <p class="font-mono text-xs mb-2" style="color:#00FF9D">SITUATION</p>
+            <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.6)">A stealth neocloud needed to bring its first H100 cluster online to hit a contractual revenue milestone — 50 staff across 10 teams, no shared deployment playbook, no production track record.</p>
           </div>
           <div>
-            <p class="font-mono text-xs mb-2" style="color:#7c6fff">APPROACH</p>
-            <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.55)">Built the first baremetal deployment workflow end-to-end. Stood up daily node-tracking, defined exit criteria for inter-team handoffs, and routed every gate through a single Jira system of record.</p>
+            <p class="font-mono text-xs mb-2" style="color:#00FF9D">APPROACH</p>
+            <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.6)">Built the first baremetal deployment workflow end-to-end. Stood up daily node-tracking, defined exit criteria for inter-team handoffs, and routed every gate through a single Jira system of record.</p>
           </div>
           <div>
-            <p class="font-mono text-xs mb-2" style="color:#7c6fff">OUTCOME</p>
-            <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.55)">First revenue milestone delivered on schedule. Over 2,000 production changes tracked through the system. The deployment workflow became the operating standard across subsequent cluster classes.</p>
+            <p class="font-mono text-xs mb-2" style="color:#00FF9D">OUTCOME</p>
+            <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.6)">First revenue milestone delivered on schedule. Over 2,000 production changes tracked through the system. The deployment workflow became the operating standard across subsequent cluster classes.</p>
           </div>
         </div>
       </div>
 
       <!-- Case 02 -->
-      <div class="gradient-border rounded-2xl p-8 md:p-10" style="background:#0f0f1a">
+      <div class="gradient-border rounded-2xl p-8 md:p-10">
         <div class="flex items-center gap-3 mb-5">
-          <span class="case-num text-xs" style="color:#7c6fff">02 / Storage Strategy</span>
-          <span class="text-xs px-2 py-0.5 rounded-full" style="background:rgba(97,82,243,0.15);color:rgba(255,255,255,0.6)">Multi-PB deal</span>
+          <span class="case-num text-xs" style="color:#00FF9D">02 / Storage Strategy</span>
+          <span class="text-xs px-2 py-0.5 rounded-full" style="background:rgba(0,255,157,0.12);color:rgba(255,255,255,0.65)">Multi-PB deal</span>
         </div>
         <h2 class="text-2xl md:text-3xl font-bold text-white mb-4 leading-tight">
           Closed a multi-petabyte object storage deal in 8 weeks.
         </h2>
         <div class="grid md:grid-cols-3 gap-6 mt-6">
           <div>
-            <p class="font-mono text-xs mb-2" style="color:#7c6fff">SITUATION</p>
-            <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.55)">An AI infrastructure provider needed to build a competitive multi-tenant storage offering against FsX Lustre and S3, with a real customer waiting on capacity decisions.</p>
+            <p class="font-mono text-xs mb-2" style="color:#00FF9D">SITUATION</p>
+            <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.6)">An AI infrastructure provider needed to build a competitive multi-tenant storage offering against FsX Lustre and S3, with a real customer waiting on capacity decisions.</p>
           </div>
           <div>
-            <p class="font-mono text-xs mb-2" style="color:#7c6fff">APPROACH</p>
-            <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.55)">Ran vendor diligence across Weka, Vast, Alluxio, Quobyte, Tigris, Pure, Cloudflare R2, Solidigm, WD. Designed a two-tier architecture — high-performance parallel filesystem plus on-prem object — and negotiated preferential pricing.</p>
+            <p class="font-mono text-xs mb-2" style="color:#00FF9D">APPROACH</p>
+            <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.6)">Ran vendor diligence across Weka, Vast, Alluxio, Quobyte, Tigris, Pure, Cloudflare R2, Solidigm, WD. Designed a two-tier architecture — high-performance parallel filesystem plus on-prem object — and negotiated preferential pricing.</p>
           </div>
           <div>
-            <p class="font-mono text-xs mb-2" style="color:#7c6fff">OUTCOME</p>
-            <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.55)">Closed the deal in eight weeks at healthy margin. First service-availability metrics shipped for S3, POSIX, and control-plane APIs. MLPerf Storage benchmarks established the public baseline.</p>
+            <p class="font-mono text-xs mb-2" style="color:#00FF9D">OUTCOME</p>
+            <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.6)">Closed the deal in eight weeks at healthy margin. First service-availability metrics shipped for S3, POSIX, and control-plane APIs. MLPerf Storage benchmarks established the public baseline.</p>
           </div>
         </div>
       </div>
 
       <!-- Case 03 -->
-      <div class="gradient-border rounded-2xl p-8 md:p-10" style="background:#0f0f1a">
+      <div class="gradient-border rounded-2xl p-8 md:p-10">
         <div class="flex items-center gap-3 mb-5">
-          <span class="case-num text-xs" style="color:#7c6fff">03 / Observability</span>
-          <span class="text-xs px-2 py-0.5 rounded-full" style="background:rgba(97,82,243,0.15);color:rgba(255,255,255,0.6)">Greenfield</span>
+          <span class="case-num text-xs" style="color:#00FF9D">03 / Observability</span>
+          <span class="text-xs px-2 py-0.5 rounded-full" style="background:rgba(0,255,157,0.12);color:rgba(255,255,255,0.65)">Greenfield</span>
         </div>
         <h2 class="text-2xl md:text-3xl font-bold text-white mb-4 leading-tight">
           Built GPU cluster observability from zero.
         </h2>
         <div class="grid md:grid-cols-3 gap-6 mt-6">
           <div>
-            <p class="font-mono text-xs mb-2" style="color:#7c6fff">SITUATION</p>
-            <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.55)">Engineering teams were flying blind. Node failures surfaced through customer escalations, not telemetry. Inventory reconciliation was manual across three sources of truth.</p>
+            <p class="font-mono text-xs mb-2" style="color:#00FF9D">SITUATION</p>
+            <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.6)">Engineering teams were flying blind. Node failures surfaced through customer escalations, not telemetry. Inventory reconciliation was manual across three sources of truth.</p>
           </div>
           <div>
-            <p class="font-mono text-xs mb-2" style="color:#7c6fff">APPROACH</p>
-            <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.55)">Stood up a Grafana-fronted stack on Aravolta telemetry. Unified inventory through Netbox plus a Snowflake source of record. Wired automated health checks into a hot-spare and remediation loop.</p>
+            <p class="font-mono text-xs mb-2" style="color:#00FF9D">APPROACH</p>
+            <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.6)">Stood up a Grafana-fronted stack on Aravolta telemetry. Unified inventory through Netbox plus a Snowflake source of record. Wired automated health checks into a hot-spare and remediation loop.</p>
           </div>
           <div>
-            <p class="font-mono text-xs mb-2" style="color:#7c6fff">OUTCOME</p>
-            <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.55)">Mean-time-to-detect dropped from hours to minutes. Automated failover became routine. Inventory reconciliation moved from a weekly meeting to a passive dashboard.</p>
+            <p class="font-mono text-xs mb-2" style="color:#00FF9D">OUTCOME</p>
+            <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.6)">Mean-time-to-detect dropped from hours to minutes. Automated failover became routine. Inventory reconciliation moved from a weekly meeting to a passive dashboard.</p>
           </div>
         </div>
       </div>
 
       <!-- Case 04 -->
-      <div class="gradient-border rounded-2xl p-8 md:p-10" style="background:#0f0f1a">
+      <div class="gradient-border rounded-2xl p-8 md:p-10">
         <div class="flex items-center gap-3 mb-5">
-          <span class="case-num text-xs" style="color:#7c6fff">04 / Sovereign Compute</span>
-          <span class="text-xs px-2 py-0.5 rounded-full" style="background:rgba(97,82,243,0.15);color:rgba(255,255,255,0.6)">Hyperscaler partner</span>
+          <span class="case-num text-xs" style="color:#00FF9D">04 / Sovereign Compute</span>
+          <span class="text-xs px-2 py-0.5 rounded-full" style="background:rgba(0,255,157,0.12);color:rgba(255,255,255,0.65)">Hyperscaler partner</span>
         </div>
         <h2 class="text-2xl md:text-3xl font-bold text-white mb-4 leading-tight">
           Technical review of a gigawatt-scale sovereign cloud buildout.
         </h2>
         <div class="grid md:grid-cols-3 gap-6 mt-6">
           <div>
-            <p class="font-mono text-xs mb-2" style="color:#7c6fff">SITUATION</p>
-            <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.55)">A hyperscaler partner was scoping a sovereign cloud buildout in the 1 GW range, with 800V DC architecture and a non-trivial transition from baremetal to virtualized GPU offerings.</p>
+            <p class="font-mono text-xs mb-2" style="color:#00FF9D">SITUATION</p>
+            <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.6)">A hyperscaler partner was scoping a sovereign cloud buildout in the 1 GW range, with 800V DC architecture and a non-trivial transition from baremetal to virtualized GPU offerings.</p>
           </div>
           <div>
-            <p class="font-mono text-xs mb-2" style="color:#7c6fff">APPROACH</p>
-            <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.55)">Reviewed the 800V DC spec, baremetal automation, and firmware-detection layer. Built a technical due-diligence template applied across site evaluations from 50 MW to 3 GW. Scoped backbone connectivity at multi-Tbps PNI.</p>
+            <p class="font-mono text-xs mb-2" style="color:#00FF9D">APPROACH</p>
+            <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.6)">Reviewed the 800V DC spec, baremetal automation, and firmware-detection layer. Built a technical due-diligence template applied across site evaluations from 50 MW to 3 GW. Scoped backbone connectivity at multi-Tbps PNI.</p>
           </div>
           <div>
-            <p class="font-mono text-xs mb-2" style="color:#7c6fff">OUTCOME</p>
-            <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.55)">Validated the BMaaS-to-VMaaS migration path for the chip OEM. Site connectivity SOW closed. Template now reusable across subsequent sovereign engagements.</p>
+            <p class="font-mono text-xs mb-2" style="color:#00FF9D">OUTCOME</p>
+            <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.6)">Validated the BMaaS-to-VMaaS migration path for the chip OEM. Site connectivity SOW closed. Template now reusable across subsequent sovereign engagements.</p>
           </div>
         </div>
       </div>
@@ -188,21 +214,21 @@
   <section class="py-20 px-6" style="border-top:1px solid rgba(255,255,255,0.05)">
     <div class="max-w-5xl mx-auto">
       <div class="text-center mb-12">
-        <p class="font-mono text-sm font-medium mb-3" style="color:#7c6fff">Patterns</p>
+        <p class="font-mono text-sm font-medium mb-3" style="color:#00FF9D">Patterns</p>
         <h2 class="text-3xl font-bold text-white">What these engagements have in common</h2>
       </div>
       <div class="grid md:grid-cols-3 gap-6">
-        <div class="rounded-xl p-6" style="background:#0f0f1a;border:1px solid rgba(255,255,255,0.05)">
+        <div class="rounded-xl p-6" style="background:#16161A;border:1px solid rgba(255,255,255,0.05)">
           <h3 class="font-semibold text-white mb-2">Tight deadlines, real money</h3>
-          <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.45)">Every engagement above was load-bearing for revenue, a partnership commitment, or a board milestone. The work had to ship.</p>
+          <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.5)">Every engagement above was load-bearing for revenue, a partnership commitment, or a board milestone. The work had to ship.</p>
         </div>
-        <div class="rounded-xl p-6" style="background:#0f0f1a;border:1px solid rgba(255,255,255,0.05)">
+        <div class="rounded-xl p-6" style="background:#16161A;border:1px solid rgba(255,255,255,0.05)">
           <h3 class="font-semibold text-white mb-2">Cross-functional ownership</h3>
-          <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.45)">The work cut across product, engineering, ops, and commercial. Single-layer recommendations don't survive contact with production.</p>
+          <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.5)">The work cut across product, engineering, ops, and commercial. Single-layer recommendations don't survive contact with production.</p>
         </div>
-        <div class="rounded-xl p-6" style="background:#0f0f1a;border:1px solid rgba(255,255,255,0.05)">
+        <div class="rounded-xl p-6" style="background:#16161A;border:1px solid rgba(255,255,255,0.05)">
           <h3 class="font-semibold text-white mb-2">Built to outlive the engagement</h3>
-          <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.45)">Each delivered a system, a template, or a workflow the team kept using — not a slide deck filed in a drive.</p>
+          <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.5)">Each delivered a system, a template, or a workflow the team kept using — not a slide deck filed in a drive.</p>
         </div>
       </div>
     </div>
@@ -212,10 +238,10 @@
   <section class="py-24 px-6" style="border-top:1px solid rgba(255,255,255,0.05)">
     <div class="max-w-3xl mx-auto text-center">
       <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Have a problem that looks like one of these?</h2>
-      <p class="mb-10" style="color:rgba(255,255,255,0.45)">Tell us what you're working on and we'll scope an engagement that fits.</p>
-      <a href="/#contact" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-white transition-all duration-200 glow" style="background:#6152f3">
+      <p class="mb-10" style="color:rgba(255,255,255,0.55)">Tell us what you're working on and we'll scope an engagement that fits.</p>
+      <a href="/#contact" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold transition-all duration-200 glow" style="background:#00FF9D;color:#0D0D0F">
         Start an Engagement
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
     </div>
   </section>
@@ -224,16 +250,25 @@
   <footer class="py-10 px-6" style="border-top:1px solid rgba(255,255,255,0.05)">
     <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
       <div class="flex items-center gap-2.5">
-        <div class="w-6 h-6 rounded-md flex items-center justify-center" style="background:#6152f3">
-          <svg width="12" height="12" viewBox="0 0 14 14" fill="none">
-            <path d="M2 7L7 2L12 7L7 12L2 7Z" fill="white" opacity="0.9"/>
-            <path d="M4.5 7L7 4.5L9.5 7L7 9.5L4.5 7Z" fill="white"/>
-          </svg>
-        </div>
-        <span class="text-sm font-medium" style="color:rgba(255,255,255,0.5)">Realtime Labs LLC</span>
+        <svg width="20" height="20" viewBox="0 0 40 40" fill="none">
+          <circle cx="20" cy="20" r="16" stroke="#00FF9D" stroke-width="0.6" opacity="0.3"/>
+          <g fill="#00FF9D">
+            <circle cx="20" cy="5" r="1"/>
+            <circle cx="32" cy="9" r="1"/>
+            <circle cx="35" cy="20" r="1"/>
+            <circle cx="32" cy="31" r="1"/>
+            <circle cx="20" cy="35" r="1"/>
+            <circle cx="8" cy="31" r="1"/>
+            <circle cx="5" cy="20" r="1"/>
+            <circle cx="8" cy="9" r="1"/>
+          </g>
+          <circle cx="20" cy="20" r="5.5" fill="#0D0D0F" stroke="#00FF9D" stroke-width="0.7"/>
+          <text x="20" y="22" font-family="Inter, sans-serif" font-size="5.5" font-weight="500" fill="#00FF9D" text-anchor="middle">rl</text>
+        </svg>
+        <span class="wordmark text-sm" style="color:rgba(255,255,255,0.55)">realtime labs llc</span>
       </div>
-      <p class="text-xs" style="color:rgba(255,255,255,0.2)">© 2026 Realtime Labs LLC · San Francisco, CA</p>
-      <a href="mailto:website@realtimelabs.io" class="text-xs" style="color:rgba(255,255,255,0.3)">website@realtimelabs.io</a>
+      <p class="text-xs" style="color:rgba(255,255,255,0.25)">© 2026 Realtime Labs LLC · San Francisco, CA · Intelligence belongs close to you</p>
+      <a href="mailto:website@realtimelabs.io" class="text-xs" style="color:rgba(255,255,255,0.35)">website@realtimelabs.io</a>
     </div>
   </footer>
 

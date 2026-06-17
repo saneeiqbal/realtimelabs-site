@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Network — Realtime Labs</title>
+  <meta name="description" content="The operator network behind Realtime Labs research and advisory work — anonymized coverage across GPU cloud, datacenters, networking, storage, platform engineering, and GTM." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Inter', sans-serif; background: #080810; }
+    .glow { box-shadow: 0 0 60px 0 rgba(124, 111, 255, 0.2); }
+    .gradient-border {
+      background: linear-gradient(#0f0f1a, #0f0f1a) padding-box,
+                  linear-gradient(135deg, rgba(124,111,255,0.4), rgba(97,82,243,0.1)) border-box;
+      border: 1px solid transparent;
+    }
+    .hero-grid {
+      background-image:
+        linear-gradient(rgba(124,111,255,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(124,111,255,0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+    .text-gradient {
+      background: linear-gradient(135deg, #ffffff 0%, #a8a0ff 60%, #7c6fff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .mono { font-family: 'JetBrains Mono', monospace; }
+  </style>
+</head>
+<body class="text-white antialiased">
+
+  <!-- Nav -->
+  <nav class="fixed top-0 left-0 right-0 z-50 border-b border-white/5 backdrop-blur-xl" style="background: rgba(8,8,16,0.85)">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2.5">
+        <div class="w-7 h-7 rounded-lg flex items-center justify-center" style="background:#6152f3">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+            <path d="M2 7L7 2L12 7L7 12L2 7Z" fill="white" opacity="0.9"/>
+            <path d="M4.5 7L7 4.5L9.5 7L7 9.5L4.5 7Z" fill="white"/>
+          </svg>
+        </div>
+        <span class="font-semibold text-white tracking-tight">Realtime Labs</span>
+      </a>
+      <div class="flex items-center gap-6">
+        <a href="/experts.html" class="text-sm font-medium hidden sm:inline-block" style="color:#7c6fff">Network</a>
+        <a href="/work.html" class="text-sm font-medium hidden sm:inline-block" style="color:rgba(255,255,255,0.7)">Work</a>
+        <a href="/#book" class="text-sm font-medium px-4 py-2 rounded-lg text-white" style="background:#6152f3">Start an Engagement</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-grid relative pt-40 pb-20 px-6 overflow-hidden">
+    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+      <div class="rounded-full blur-[120px]" style="width:500px;height:500px;background:rgba(97,82,243,0.10)"></div>
+    </div>
+
+    <div class="max-w-4xl mx-auto text-center relative">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium mb-8 font-mono" style="border:1px solid rgba(124,111,255,0.3);background:rgba(97,82,243,0.1);color:#7c6fff">
+        <span class="w-1.5 h-1.5 rounded-full" style="background:#7c6fff"></span>
+        Our Network
+      </div>
+
+      <h1 class="text-4xl md:text-6xl font-bold leading-tight tracking-tight mb-6">
+        <span class="text-gradient">The operators</span>
+        <span class="text-white">behind our research.</span>
+      </h1>
+
+      <p class="text-lg max-w-2xl mx-auto leading-relaxed" style="color:rgba(255,255,255,0.5)">
+        Realtime Labs research is informed by a network of senior operators across the AI infrastructure stack. Profiles are anonymized to protect current-employer confidentiality, and every engagement runs through conflict screens and written briefings.
+      </p>
+    </div>
+  </section>
+
+  <!-- Expert Cards -->
+  <section class="pb-24 px-6">
+    <div class="max-w-5xl mx-auto space-y-6">
+
+      <!-- Expert A -->
+      <div class="gradient-border rounded-2xl p-8 md:p-10" style="background:#0f0f1a">
+        <div class="flex items-start justify-between flex-wrap gap-4 mb-6">
+          <div>
+            <p class="mono text-xs mb-2" style="color:#7c6fff">Expert A · Compute &amp; Datacenter Strategy</p>
+            <h2 class="text-2xl md:text-3xl font-bold text-white leading-tight">AI Infrastructure Product &amp; Datacenter Strategy Leader</h2>
+          </div>
+          <span class="mono text-xs px-3 py-1.5 rounded-full" style="background:rgba(97,82,243,0.15);color:#7c6fff">Hyperscaler + startup</span>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 mt-6">
+          <div>
+            <p class="mono text-xs mb-3" style="color:#7c6fff">EXPERTISE</p>
+            <ul class="space-y-2 text-sm" style="color:rgba(255,255,255,0.55)">
+              <li>· GPU cloud &amp; AI infrastructure product strategy</li>
+              <li>· Datacenter capacity planning &amp; infrastructure economics</li>
+              <li>· Fleet utilization, reliability, operational maturity</li>
+              <li>· Enterprise &amp; sovereign AI infrastructure requirements</li>
+              <li>· Build-vs-buy analysis for AI compute platforms</li>
+            </ul>
+            <p class="mono text-xs mb-3 mt-6" style="color:#7c6fff">BACKGROUND</p>
+            <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.55)">Former hyperscaler infrastructure leader. Experience across datacenter systems, AI compute, and product management. Built and operated infrastructure programs at large-scale technology environments.</p>
+          </div>
+          <div>
+            <p class="mono text-xs mb-3" style="color:#7c6fff">BEST-FIT QUESTIONS</p>
+            <ul class="space-y-2 text-sm" style="color:rgba(255,255,255,0.55)">
+              <li>· How should an enterprise evaluate GPU cloud providers?</li>
+              <li>· Where do neocloud margins break down?</li>
+              <li>· What separates real AI infra platforms from resale businesses?</li>
+              <li>· How should a GPU platform think about utilization &amp; reliability?</li>
+              <li>· What matters in sovereign AI infrastructure beyond raw GPU count?</li>
+            </ul>
+            <p class="mono text-xs mb-2 mt-6" style="color:rgba(255,100,100,0.7)">OFF-LIMITS</p>
+            <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.4)">Current-employer confidential strategy, roadmap, pricing, contracts, customer details, or supply commitments.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Expert B -->
+      <div class="gradient-border rounded-2xl p-8 md:p-10" style="background:#0f0f1a">
+        <div class="flex items-start justify-between flex-wrap gap-4 mb-6">
+          <div>
+            <p class="mono text-xs mb-2" style="color:#7c6fff">Expert B · Platform Engineering</p>
+            <h2 class="text-2xl md:text-3xl font-bold text-white leading-tight">Cloud-Native Platform &amp; Engineering Transformation Leader</h2>
+          </div>
+          <span class="mono text-xs px-3 py-1.5 rounded-full" style="background:rgba(97,82,243,0.15);color:#7c6fff">Kubernetes + IDP</span>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 mt-6">
+          <div>
+            <p class="mono text-xs mb-3" style="color:#7c6fff">EXPERTISE</p>
+            <ul class="space-y-2 text-sm" style="color:rgba(255,255,255,0.55)">
+              <li>· Kubernetes &amp; cloud-native platform architecture</li>
+              <li>· Internal developer platforms &amp; platform engineering</li>
+              <li>· DevOps transformation &amp; delivery systems</li>
+              <li>· Engineering leadership &amp; org design</li>
+              <li>· Analytics, BI, operational systems as products</li>
+            </ul>
+            <p class="mono text-xs mb-3 mt-6" style="color:#7c6fff">BACKGROUND</p>
+            <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.55)">Senior engineering and product leadership background. Advisory work spanning Kubernetes, cloud, edge, organizational change, and systematic learning. Bridges technical architecture and team operating models.</p>
+          </div>
+          <div>
+            <p class="mono text-xs mb-3" style="color:#7c6fff">BEST-FIT QUESTIONS</p>
+            <ul class="space-y-2 text-sm" style="color:rgba(255,255,255,0.55)">
+              <li>· How do enterprises successfully adopt Kubernetes?</li>
+              <li>· What are the failure modes of platform-engineering orgs?</li>
+              <li>· How should an internal developer platform be measured?</li>
+              <li>· What cloud-native tooling is durable vs. overbuilt?</li>
+              <li>· How do you reduce friction between infra &amp; app teams?</li>
+            </ul>
+            <p class="mono text-xs mb-2 mt-6" style="color:rgba(255,100,100,0.7)">OFF-LIMITS</p>
+            <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.4)">Confidential client details from prior advisory work.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Expert C -->
+      <div class="gradient-border rounded-2xl p-8 md:p-10" style="background:#0f0f1a">
+        <div class="flex items-start justify-between flex-wrap gap-4 mb-6">
+          <div>
+            <p class="mono text-xs mb-2" style="color:#7c6fff">Expert C · Datacenter &amp; GPU Programs</p>
+            <h2 class="text-2xl md:text-3xl font-bold text-white leading-tight">Datacenter Technology &amp; GPU Infrastructure Program Leader</h2>
+          </div>
+          <span class="mono text-xs px-3 py-1.5 rounded-full" style="background:rgba(97,82,243,0.15);color:#7c6fff">Hyperscale + AI</span>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 mt-6">
+          <div>
+            <p class="mono text-xs mb-3" style="color:#7c6fff">EXPERTISE</p>
+            <ul class="space-y-2 text-sm" style="color:rgba(255,255,255,0.55)">
+              <li>· AI datacenter deployment &amp; readiness</li>
+              <li>· GPU infrastructure program execution</li>
+              <li>· Datacenter technology integration</li>
+              <li>· Infrastructure TPM &amp; cross-functional execution</li>
+              <li>· Hardware/software deployment dependencies</li>
+            </ul>
+            <p class="mono text-xs mb-3 mt-6" style="color:#7c6fff">BACKGROUND</p>
+            <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.55)">Experience across major technology companies in search, social, AI, and GPU-platform ecosystems. Current work in datacenter technologies. Strong grasp of execution bottlenecks behind infrastructure scale-out.</p>
+          </div>
+          <div>
+            <p class="mono text-xs mb-3" style="color:#7c6fff">BEST-FIT QUESTIONS</p>
+            <ul class="space-y-2 text-sm" style="color:rgba(255,255,255,0.55)">
+              <li>· What actually slows down AI datacenter deployment?</li>
+              <li>· What does good infrastructure TPM look like at scale?</li>
+              <li>· Where do GPU cluster rollouts fail operationally?</li>
+              <li>· What risks should investors underwrite in AI infra builds?</li>
+              <li>· How do you coordinate HW, facilities, networking &amp; SW readiness?</li>
+            </ul>
+            <p class="mono text-xs mb-2 mt-6" style="color:rgba(255,100,100,0.7)">OFF-LIMITS</p>
+            <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.4)">Current-employer product roadmap, customer allocation, pricing, supply availability, or internal strategy.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Expert D -->
+      <div class="gradient-border rounded-2xl p-8 md:p-10" style="background:#0f0f1a">
+        <div class="flex items-start justify-between flex-wrap gap-4 mb-6">
+          <div>
+            <p class="mono text-xs mb-2" style="color:#7c6fff">Expert D · Networking &amp; Infrastructure SW</p>
+            <h2 class="text-2xl md:text-3xl font-bold text-white leading-tight">Cloud Networking &amp; AI Infrastructure Software Expert</h2>
+          </div>
+          <span class="mono text-xs px-3 py-1.5 rounded-full" style="background:rgba(97,82,243,0.15);color:#7c6fff">15+ years</span>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 mt-6">
+          <div>
+            <p class="mono text-xs mb-3" style="color:#7c6fff">EXPERTISE</p>
+            <ul class="space-y-2 text-sm" style="color:rgba(255,255,255,0.55)">
+              <li>· Cloud networking &amp; private connectivity</li>
+              <li>· Enterprise interconnect &amp; Direct Connect-style architectures</li>
+              <li>· Network software systems</li>
+              <li>· Multicloud connectivity &amp; reliability</li>
+              <li>· AI infrastructure networking requirements</li>
+            </ul>
+            <p class="mono text-xs mb-3 mt-6" style="color:#7c6fff">BACKGROUND</p>
+            <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.55)">15+ years across embedded systems, collaboration platforms, VoIP/PBX, cloud networking, and infrastructure. Experience relevant to cloud interconnect, private connectivity, and network software for high-scale systems.</p>
+          </div>
+          <div>
+            <p class="mono text-xs mb-3" style="color:#7c6fff">BEST-FIT QUESTIONS</p>
+            <ul class="space-y-2 text-sm" style="color:rgba(255,255,255,0.55)">
+              <li>· What are the real customer requirements for cloud interconnect?</li>
+              <li>· How do private connectivity products get adopted by enterprises?</li>
+              <li>· What breaks in multicloud network architecture?</li>
+              <li>· How should AI infra companies think about networking as a product?</li>
+              <li>· Which cloud-networking startups are solving real pain?</li>
+            </ul>
+            <p class="mono text-xs mb-2 mt-6" style="color:rgba(255,100,100,0.7)">OFF-LIMITS</p>
+            <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.4)">Confidential roadmap, customer, pricing, or architecture details from current or former employers.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Expert E -->
+      <div class="gradient-border rounded-2xl p-8 md:p-10" style="background:#0f0f1a">
+        <div class="flex items-start justify-between flex-wrap gap-4 mb-6">
+          <div>
+            <p class="mono text-xs mb-2" style="color:#7c6fff">Expert E · GTM &amp; Commercial</p>
+            <h2 class="text-2xl md:text-3xl font-bold text-white leading-tight">AI Infrastructure GTM &amp; Commercial Strategy Leader</h2>
+          </div>
+          <span class="mono text-xs px-3 py-1.5 rounded-full" style="background:rgba(97,82,243,0.15);color:#7c6fff">PE-backed cloud</span>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8 mt-6">
+          <div>
+            <p class="mono text-xs mb-3" style="color:#7c6fff">EXPERTISE</p>
+            <ul class="space-y-2 text-sm" style="color:rgba(255,255,255,0.55)">
+              <li>· AI infrastructure GTM strategy</li>
+              <li>· GPU cloud pricing, packaging, buyer segmentation</li>
+              <li>· Enterprise sales motion for infrastructure products</li>
+              <li>· Competitive positioning vs. hyperscalers and neoclouds</li>
+              <li>· Commercial diligence for AI infrastructure companies</li>
+            </ul>
+            <p class="mono text-xs mb-3 mt-6" style="color:#7c6fff">BACKGROUND</p>
+            <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.55)">Leads or has led GTM for AI infrastructure at a PE-backed cloud company. Prior technology-sector experience spanning cloud, AI, and platform ecosystems. Strong buyer-side and seller-side understanding of infrastructure commercialization.</p>
+          </div>
+          <div>
+            <p class="mono text-xs mb-3" style="color:#7c6fff">BEST-FIT QUESTIONS</p>
+            <ul class="space-y-2 text-sm" style="color:rgba(255,255,255,0.55)">
+              <li>· Who actually buys GPU cloud capacity, and why?</li>
+              <li>· How should an AI infra company package and price its offering?</li>
+              <li>· What objections kill enterprise AI infrastructure deals?</li>
+              <li>· How do neoclouds compete against hyperscalers?</li>
+              <li>· What does durable demand look like vs. temporary GPU scarcity?</li>
+            </ul>
+            <p class="mono text-xs mb-2 mt-6" style="color:rgba(255,100,100,0.7)">OFF-LIMITS</p>
+            <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.4)">Current-employer pipeline, customer names, pricing, bookings, margin structure, roadmap, or internal strategy.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Compliance note -->
+  <section class="py-16 px-6" style="border-top:1px solid rgba(255,255,255,0.05)">
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="mono text-xs mb-3" style="color:#7c6fff">Compliance</p>
+      <h2 class="text-2xl font-bold text-white mb-4">How we keep engagements safe.</h2>
+      <p class="leading-relaxed" style="color:rgba(255,255,255,0.5)">
+        Every member of our network has explicit off-limits topics tied to current-employer confidentiality. We run a conflict screen before every engagement, send a written briefing in advance, and provide a synthesized research deliverable at the end. Realtime Labs does not solicit or transmit material non-public information.
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 px-6" style="border-top:1px solid rgba(255,255,255,0.05)">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Have a research or diligence question?</h2>
+      <p class="mb-10" style="color:rgba(255,255,255,0.5)">Tell us what you're underwriting or building. We'll scope an engagement, route the right network coverage, and deliver a written memo you can act on.</p>
+      <a href="/#book" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-white duration-200 glow" style="background:#6152f3">
+        Start an Engagement
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-10 px-6" style="border-top:1px solid rgba(255,255,255,0.05)">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2.5">
+        <div class="w-6 h-6 rounded-md flex items-center justify-center" style="background:#6152f3">
+          <svg width="12" height="12" viewBox="0 0 14 14" fill="none">
+            <path d="M2 7L7 2L12 7L7 12L2 7Z" fill="white" opacity="0.9"/>
+            <path d="M4.5 7L7 4.5L9.5 7L7 9.5L4.5 7Z" fill="white"/>
+          </svg>
+        </div>
+        <span class="text-sm font-medium" style="color:rgba(255,255,255,0.5)">Realtime Labs LLC</span>
+      </div>
+      <p class="text-xs" style="color:rgba(255,255,255,0.2)">© 2026 Realtime Labs LLC · San Francisco, CA</p>
+      <a href="mailto:sanee2@gmail.com" class="text-xs" style="color:rgba(255,255,255,0.3)">sanee2@gmail.com</a>
+    </div>
+  </footer>
+
+</body>
+</html>

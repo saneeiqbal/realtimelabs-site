@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Work — Realtime Labs</title>
-  <meta name="description" content="Real engagements behind Realtime Labs — anonymized case studies in AI infrastructure, storage, observability, and sovereign compute." />
+  <meta name="description" content="Real engagements behind Realtime Labs — anonymized case studies in AI infrastructure, storage, observability, sovereign compute, and AI cloud networking." />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -207,6 +207,31 @@
         </div>
       </div>
 
+      <!-- Case 05 -->
+      <div class="gradient-border rounded-2xl p-8 md:p-10">
+        <div class="flex items-center gap-3 mb-5">
+          <span class="case-num text-xs" style="color:#00FF9D">05 / AI Cloud Networking</span>
+          <span class="text-xs px-2 py-0.5 rounded-full" style="background:rgba(0,255,157,0.12);color:rgba(255,255,255,0.65)">Stealth AI cloud</span>
+        </div>
+        <h2 class="text-2xl md:text-3xl font-bold text-white mb-4 leading-tight">
+          Shipped the tenant overlay network powering an AI cloud's first datacenter.
+        </h2>
+        <div class="grid md:grid-cols-3 gap-6 mt-6">
+          <div>
+            <p class="font-mono text-xs mb-2" style="color:#00FF9D">SITUATION</p>
+            <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.6)">A stealth AI cloud needed its first customer-facing network: a multi-tenant overlay, load balancers, and management plane purpose-built for AI training and inference — not a re-skin of enterprise cloud networking.</p>
+          </div>
+          <div>
+            <p class="font-mono text-xs mb-2" style="color:#00FF9D">APPROACH</p>
+            <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.6)">Architected the customer overlay end-to-end and directly contributed control-plane and datapath code. Partnered with AI server and Kubernetes engineers on on-host networking and NCCL, and led cross-layer triage when issues spanned GPU hosts and the underlying fabric.</p>
+          </div>
+          <div>
+            <p class="font-mono text-xs mb-2" style="color:#00FF9D">OUTCOME</p>
+            <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.6)">Overlay control plane and datapath running in production in the first AI datacenter. Design decisions across the network software stack realigned to AI workload demand. Became the company-wide SME bridging networking, AI server ops, and software systems.</p>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -267,7 +292,7 @@
         </svg>
         <span class="wordmark text-sm" style="color:rgba(255,255,255,0.55)">realtime labs llc</span>
       </div>
-      <p class="text-xs" style="color:rgba(255,255,255,0.25)">© 2026 Realtime Labs LLC · San Francisco, CA · AI infrastructure advisory &amp; consulting</p>
+      <p class="text-xs" style="color:rgba(255,255,255,0.25)">© 2026 Realtime Labs LLC · San Francisco, CA · Intelligence belongs close to you</p>
       <a href="mailto:website@realtimelabs.io" class="text-xs" style="color:rgba(255,255,255,0.35)">website@realtimelabs.io</a>
     </div>
   </footer>

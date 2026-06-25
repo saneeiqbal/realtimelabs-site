@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services — Realtime Labs</title>
+  <meta name="description" content="Realtime Labs services: executive advisory, investment diligence, and deep AI infrastructure advisory across GPU cloud, datacenters, networking, storage, and platform engineering." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Inter', sans-serif; background: #0D0D0F; }
+    .glow { box-shadow: 0 0 60px 0 rgba(0, 255, 157, 0.15); }
+    .gradient-border {
+      background: linear-gradient(#16161A, #16161A) padding-box,
+                  linear-gradient(135deg, rgba(0,255,157,0.35), rgba(0,255,157,0.05)) border-box;
+      border: 1px solid transparent;
+    }
+    .service-card {
+      background: #16161A;
+      border: 1px solid rgba(255,255,255,0.06);
+      border-radius: 14px;
+      padding: 20px 24px;
+      transition: border-color 0.15s;
+    }
+    .service-card:hover { border-color: rgba(0,255,157,0.25); }
+    .hero-grid {
+      background-image:
+        linear-gradient(rgba(0,255,157,0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,255,157,0.04) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+    .text-gradient {
+      background: linear-gradient(135deg, #ffffff 0%, #a3ffd6 55%, #00FF9D 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .wordmark { font-weight: 500; letter-spacing: -0.01em; }
+    .mono { font-family: 'JetBrains Mono', monospace; }
+    @keyframes pulse-ring {
+      0%, 100% { opacity: 0.30; transform: scale(1); }
+      50% { opacity: 0.12; transform: scale(1.08); }
+    }
+    .pulse-ring { transform-origin: center; animation: pulse-ring 4s ease-in-out infinite; }
+    .category-label {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 6px 14px; border-radius: 999px; font-size: 11px; font-weight: 500;
+      font-family: 'JetBrains Mono', monospace;
+      border: 1px solid rgba(0,255,157,0.3);
+      background: rgba(0,255,157,0.08);
+      color: #00FF9D; margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body class="text-white antialiased">
+
+  <!-- Nav -->
+  <nav class="fixed top-0 left-0 right-0 z-50 border-b border-white/5 backdrop-blur-xl" style="background: rgba(13,13,15,0.85)">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="/" class="flex items-center gap-2.5">
+        <svg width="28" height="28" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle class="pulse-ring" cx="20" cy="20" r="17" stroke="#00FF9D" stroke-width="0.6" opacity="0.3"/>
+          <circle cx="20" cy="20" r="13" stroke="#00FF9D" stroke-width="0.5" opacity="0.22"/>
+          <g fill="#00FF9D">
+            <circle cx="20" cy="3.5" r="1.2"/>
+            <circle cx="32.8" cy="8" r="1.2"/>
+            <circle cx="37" cy="20" r="1.2"/>
+            <circle cx="32.8" cy="32" r="1.2"/>
+            <circle cx="20" cy="36.5" r="1.2"/>
+            <circle cx="7.2" cy="32" r="1.2"/>
+            <circle cx="3" cy="20" r="1.2"/>
+            <circle cx="7.2" cy="8" r="1.2"/>
+          </g>
+          <g stroke="#00FF9D" stroke-width="0.4" opacity="0.45">
+            <line x1="20" y1="3.5" x2="20" y2="14"/>
+            <line x1="32.8" y1="8" x2="24.4" y2="15.6"/>
+            <line x1="37" y1="20" x2="26" y2="20"/>
+            <line x1="32.8" y1="32" x2="24.4" y2="24.4"/>
+            <line x1="20" y1="36.5" x2="20" y2="26"/>
+            <line x1="7.2" y1="32" x2="15.6" y2="24.4"/>
+            <line x1="3" y1="20" x2="14" y2="20"/>
+            <line x1="7.2" y1="8" x2="15.6" y2="15.6"/>
+          </g>
+          <circle cx="20" cy="20" r="6" fill="#0D0D0F" stroke="#00FF9D" stroke-width="0.8"/>
+          <text x="20" y="22.3" font-family="Inter, sans-serif" font-size="6.2" font-weight="500" fill="#00FF9D" text-anchor="middle">rl</text>
+        </svg>
+        <span class="wordmark text-white">realtime labs</span>
+      </a>
+      <div class="flex items-center gap-6">
+        <a href="/services.html" class="text-sm font-medium hidden sm:inline-block" style="color:#00FF9D">services</a>
+        <a href="/experts.html" class="text-sm font-medium hidden sm:inline-block" style="color:rgba(255,255,255,0.7)">network</a>
+        <a href="/work.html" class="text-sm font-medium hidden sm:inline-block" style="color:rgba(255,255,255,0.7)">work</a>
+        <a href="/#contact" class="text-sm font-semibold px-4 py-2 rounded-lg" style="background:#00FF9D;color:#0D0D0F">Start an Engagement</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero-grid relative pt-40 pb-20 px-6 overflow-hidden">
+    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+      <div class="rounded-full blur-[120px]" style="width:520px;height:520px;background:rgba(0,255,157,0.08)"></div>
+    </div>
+
+    <div class="max-w-4xl mx-auto text-center relative">
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium mb-8 font-mono" style="border:1px solid rgba(0,255,157,0.3);background:rgba(0,255,157,0.08);color:#00FF9D">
+        <span class="w-1.5 h-1.5 rounded-full" style="background:#00FF9D"></span>
+        Services
+      </div>
+
+      <h1 class="text-4xl md:text-6xl font-bold leading-tight tracking-tight mb-6">
+        <span class="text-gradient">What we do,</span>
+        <span class="text-white"> organized by need.</span>
+      </h1>
+
+      <p class="text-lg max-w-2xl mx-auto leading-relaxed" style="color:rgba(255,255,255,0.55)">
+        Three practice areas built on operator experience. Every engagement produces a written deliverable — a memo, a map, a scorecard — not a transcript.
+      </p>
+
+      <!-- Practice area pills -->
+      <div class="flex flex-wrap justify-center gap-3 mt-10">
+        <a href="#executive" class="px-4 py-2 rounded-xl text-sm font-medium" style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);color:rgba(255,255,255,0.7)">Executive Services</a>
+        <a href="#investment" class="px-4 py-2 rounded-xl text-sm font-medium" style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);color:rgba(255,255,255,0.7)">Investment Advisory</a>
+        <a href="#infrastructure" class="px-4 py-2 rounded-xl text-sm font-medium" style="background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);color:rgba(255,255,255,0.7)">AI Infrastructure Advisory</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Executive Services ────────────────────────────────────────────── -->
+  <section id="executive" class="py-24 px-6" style="border-top:1px solid rgba(255,255,255,0.05)">
+    <div class="max-w-6xl mx-auto">
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-16 mb-16">
+        <div class="lg:col-span-1">
+          <div class="category-label">Executive Services</div>
+          <h2 class="text-2xl md:text-3xl font-bold text-white leading-tight mb-4">Strategic advisory for executives making consequential decisions.</h2>
+          <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.55)">Operator-caliber perspective on architecture, commercial terms, and go-to-market — delivered as written assessments with clear recommendations, not opinion calls.</p>
+        </div>
+
+        <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-3 gap-4">
+
+          <div class="service-card">
+            <div class="w-8 h-8 rounded-lg flex items-center justify-center mb-4" style="background:rgba(0,255,157,0.10);border:1px solid rgba(0,255,157,0.2)">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 2h9l3 3v9H2z" stroke="#00FF9D" stroke-width="1.3" stroke-linejoin="round"/><path d="M11 2v3h3M5 8h6M5 10.5h6M5 5.5h3" stroke="#00FF9D" stroke-width="1.3" stroke-linecap="round"/></svg>
+            </div>
+            <h3 class="font-semibold text-white mb-2 leading-snug">Roadmap / Architecture Review</h3>
+            <p class="text-xs leading-relaxed" style="color:rgba(255,255,255,0.5)">Technical architecture and product roadmap reviewed by operators who've built at scale. Written assessment with prioritized recommendations.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="w-8 h-8 rounded-lg flex items-center justify-center mb-4" style="background:rgba(0,255,157,0.10);border:1px solid rgba(0,255,157,0.2)">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 2v3M8 11v3M2 8h3M11 8h3" stroke="#00FF9D" stroke-width="1.3" stroke-linecap="round"/><path d="M4.5 4.5l2.1 2.1M9.4 9.4l2.1 2.1M4.5 11.5l2.1-2.1M9.4 6.6l2.1-2.1" stroke="#00FF9D" stroke-width="1.3" stroke-linecap="round"/><circle cx="8" cy="8" r="2" stroke="#00FF9D" stroke-width="1.3"/></svg>
+            </div>
+            <h3 class="font-semibold text-white mb-2 leading-snug">Contract Negotiation</h3>
+            <p class="text-xs leading-relaxed" style="color:rgba(255,255,255,0.5)">Operator-grade review of vendor contracts, infrastructure commitments, and SLA terms — from a team that's been on both sides of the table.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="w-8 h-8 rounded-lg flex items-center justify-center mb-4" style="background:rgba(0,255,157,0.10);border:1px solid rgba(0,255,157,0.2)">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 12l4-4 3 3 5-7" stroke="#00FF9D" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="font-semibold text-white mb-2 leading-snug">Product, Pricing &amp; GTM</h3>
+            <p class="text-xs leading-relaxed" style="color:rgba(255,255,255,0.5)">End-to-end go-to-market review: buyer segmentation, packaging, pricing mechanics, competitive positioning, and objection handling.</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Investment Advisory ───────────────────────────────────────────── -->
+  <section id="investment" class="py-24 px-6" style="border-top:1px solid rgba(255,255,255,0.05)">
+    <div class="max-w-6xl mx-auto">
+
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-16 mb-16">
+        <div class="lg:col-span-1">
+          <div class="category-label">Investment Advisory</div>
+          <h2 class="text-2xl md:text-3xl font-bold text-white leading-tight mb-4">Operator-sourced diligence for funds underwriting AI infrastructure.</h2>
+          <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.55)">Technical diligence, competitive maps, and pressure-tested financial models — written by people who ran these systems, not analysts who studied them.</p>
+        </div>
+
+        <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4">
+
+          <div class="service-card">
+            <div class="w-8 h-8 rounded-lg flex items-center justify-center mb-4" style="background:rgba(0,255,157,0.10);border:1px solid rgba(0,255,157,0.2)">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="6" stroke="#00FF9D" stroke-width="1.3"/><path d="M8 5v3.5l2 2" stroke="#00FF9D" stroke-width="1.3" stroke-linecap="round"/></svg>
+            </div>
+            <h3 class="font-semibold text-white mb-2 leading-snug">Technical / Vendor Due Diligence</h3>
+            <p class="text-xs leading-relaxed" style="color:rgba(255,255,255,0.5)">Deep technical review of AI infrastructure companies — architecture quality, defensibility, team capability, and competitive differentiation. Written IC-ready memo.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="w-8 h-8 rounded-lg flex items-center justify-center mb-4" style="background:rgba(0,255,157,0.10);border:1px solid rgba(0,255,157,0.2)">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><rect x="2" y="2" width="5" height="5" rx="1" stroke="#00FF9D" stroke-width="1.3"/><rect x="9" y="2" width="5" height="5" rx="1" stroke="#00FF9D" stroke-width="1.3"/><rect x="2" y="9" width="5" height="5" rx="1" stroke="#00FF9D" stroke-width="1.3"/><rect x="9" y="9" width="5" height="5" rx="1" stroke="#00FF9D" stroke-width="1.3"/></svg>
+            </div>
+            <h3 class="font-semibold text-white mb-2 leading-snug">Sector Landscape Briefs / Competitive Teardowns</h3>
+            <p class="text-xs leading-relaxed" style="color:rgba(255,255,255,0.5)">Structured market maps of a defined AI infra sector — players, positioning, moats, and investment thesis implications. Built for IC presentations and LP updates.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="w-8 h-8 rounded-lg flex items-center justify-center mb-4" style="background:rgba(0,255,157,0.10);border:1px solid rgba(0,255,157,0.2)">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 14l4-8 3 5 2-3 3 6" stroke="#00FF9D" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="font-semibold text-white mb-2 leading-snug">Unit Economics &amp; Margin Optimization</h3>
+            <p class="text-xs leading-relaxed" style="color:rgba(255,255,255,0.5)">Operator analysis of GPU cloud, datacenter, and platform unit economics — capacity cost structure, utilization levers, margin profile, and improvement vectors.</p>
+          </div>
+
+          <div class="service-card">
+            <div class="w-8 h-8 rounded-lg flex items-center justify-center mb-4" style="background:rgba(0,255,157,0.10);border:1px solid rgba(0,255,157,0.2)">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 10h3l2-6 3 8 2-4 2 2h2" stroke="#00FF9D" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <h3 class="font-semibold text-white mb-2 leading-snug">Demand Forecast Pressure Testing</h3>
+            <p class="text-xs leading-relaxed" style="color:rgba(255,255,255,0.5)">Operator stress-test of demand projections — customer mix quality, churn risk, contract structure, expansion assumptions, and realistic adoption curves.</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── AI Infrastructure Advisory ──────────────────────────────────── -->
+  <section id="infrastructure" class="py-24 px-6" style="border-top:1px solid rgba(255,255,255,0.05)">
+    <div class="max-w-6xl mx-auto">
+
+      <div class="mb-16">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-16 mb-12">
+          <div class="lg:col-span-1">
+            <div class="category-label">AI Infrastructure Advisory</div>
+            <h2 class="text-2xl md:text-3xl font-bold text-white leading-tight mb-4">The full AI infrastructure stack, covered by people who built it.</h2>
+            <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.55)">Every line item below maps to real operator experience — not generic cloud consulting. Our advisors ran these systems in production at hyperscaler scale and in first-generation AI clouds.</p>
+          </div>
+
+          <div class="lg:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-4">
+
+            <div class="service-card">
+              <div class="flex items-start gap-3">
+                <span class="mono text-xs mt-0.5 shrink-0" style="color:#00FF9D">01</span>
+                <div>
+                  <h3 class="font-semibold text-white mb-1.5 leading-snug">GPU Cloud / Neocloud Infrastructure Strategy</h3>
+                  <p class="text-xs leading-relaxed" style="color:rgba(255,255,255,0.5)">Architecture strategy for building or scaling a GPU cloud — cluster design, workload mix, pricing model, utilization targets, and operational maturity roadmap.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="service-card">
+              <div class="flex items-start gap-3">
+                <span class="mono text-xs mt-0.5 shrink-0" style="color:#00FF9D">02</span>
+                <div>
+                  <h3 class="font-semibold text-white mb-1.5 leading-snug">Datacenter, Cluster Design &amp; Deployment</h3>
+                  <p class="text-xs leading-relaxed" style="color:rgba(255,255,255,0.5)">Site selection, power and MEP design, GPU cluster bring-up, rollout execution planning, and operational risk identification before day one.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="service-card">
+              <div class="flex items-start gap-3">
+                <span class="mono text-xs mt-0.5 shrink-0" style="color:#00FF9D">03</span>
+                <div>
+                  <h3 class="font-semibold text-white mb-1.5 leading-snug">AI Developer Platform</h3>
+                  <p class="text-xs leading-relaxed" style="color:rgba(255,255,255,0.5)">Infrastructure for low-latency voice/video, agentic inference, and fine-tuning — design, vendor evaluation, and build-vs-buy analysis for developer-facing AI platforms.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="service-card">
+              <div class="flex items-start gap-3">
+                <span class="mono text-xs mt-0.5 shrink-0" style="color:#00FF9D">04</span>
+                <div>
+                  <h3 class="font-semibold text-white mb-1.5 leading-snug">AI Infrastructure Platform</h3>
+                  <p class="text-xs leading-relaxed" style="color:rgba(255,255,255,0.5)">Observability, reliability engineering, inventory management, and billing systems for AI cloud operators — system design and toolchain selection.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="service-card">
+              <div class="flex items-start gap-3">
+                <span class="mono text-xs mt-0.5 shrink-0" style="color:#00FF9D">05</span>
+                <div>
+                  <h3 class="font-semibold text-white mb-1.5 leading-snug">Supply &amp; Vendor Management</h3>
+                  <p class="text-xs leading-relaxed" style="color:rgba(255,255,255,0.5)">GPU procurement strategy, supply chain risk, vendor relationship structure, and contract negotiation — from operators who've managed at-scale supply positions.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="service-card">
+              <div class="flex items-start gap-3">
+                <span class="mono text-xs mt-0.5 shrink-0" style="color:#00FF9D">06</span>
+                <div>
+                  <h3 class="font-semibold text-white mb-1.5 leading-snug">Capacity Planning &amp; Refactors / Refreshes</h3>
+                  <p class="text-xs leading-relaxed" style="color:rgba(255,255,255,0.5)">Multi-generation capacity planning, cluster refresh decision frameworks, and workload migration planning — with operator judgment on what actually breaks at transition.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="service-card">
+              <div class="flex items-start gap-3">
+                <span class="mono text-xs mt-0.5 shrink-0" style="color:#00FF9D">07</span>
+                <div>
+                  <h3 class="font-semibold text-white mb-1.5 leading-snug">Training &amp; Inference Workload Optimization</h3>
+                  <p class="text-xs leading-relaxed" style="color:rgba(255,255,255,0.5)">Workload characterization, cluster efficiency analysis, NCCL tuning, and cost-per-token optimization — for operators running training or inference at scale.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="service-card">
+              <div class="flex items-start gap-3">
+                <span class="mono text-xs mt-0.5 shrink-0" style="color:#00FF9D">08</span>
+                <div>
+                  <h3 class="font-semibold text-white mb-1.5 leading-snug">Storage &amp; Data Management</h3>
+                  <p class="text-xs leading-relaxed" style="color:rgba(255,255,255,0.5)">Object storage, parallel filesystems, data movement, and storage architecture for AI workloads — vendor diligence, design review, and benchmark interpretation.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="service-card md:col-span-2">
+              <div class="flex items-start gap-3">
+                <span class="mono text-xs mt-0.5 shrink-0" style="color:#00FF9D">09</span>
+                <div>
+                  <h3 class="font-semibold text-white mb-1.5 leading-snug">New Product Introduction (ASICs &amp; Chip Architectures)</h3>
+                  <p class="text-xs leading-relaxed" style="color:rgba(255,255,255,0.5)">Technical and commercial readiness assessment for new chip platforms — software stack maturity, ecosystem depth, workload fit, and realistic customer adoption trajectory. For chip companies, cloud operators, and investors evaluating ASIC plays.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- How we deliver -->
+  <section class="py-20 px-6" style="border-top:1px solid rgba(255,255,255,0.05)">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <p class="font-mono text-sm font-medium mb-3" style="color:#00FF9D">Delivery</p>
+        <h2 class="text-3xl font-bold text-white">Every service produces a written output.</h2>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="gradient-border rounded-xl p-6">
+          <h3 class="font-semibold text-white mb-2">Diligence Memos</h3>
+          <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.5)">IC-ready technical or commercial assessment with clear findings, risks, and recommendations. Written for the partner who needs to make a decision, not the analyst who gathered data.</p>
+        </div>
+        <div class="gradient-border rounded-xl p-6">
+          <h3 class="font-semibold text-white mb-2">Strategy Documents</h3>
+          <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.5)">Structured architecture or GTM recommendations — with tradeoffs made explicit and prioritized by impact. Designed to survive the first board meeting.</p>
+        </div>
+        <div class="gradient-border rounded-xl p-6">
+          <h3 class="font-semibold text-white mb-2">Market &amp; Competitor Maps</h3>
+          <p class="text-sm leading-relaxed" style="color:rgba(255,255,255,0.5)">Defined sector landscape with player positioning, moat analysis, and investment implications. Updated as the sector moves — not a static deck.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-24 px-6" style="border-top:1px solid rgba(255,255,255,0.05)">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Tell us what you need.</h2>
+      <p class="mb-10" style="color:rgba(255,255,255,0.55)">Most engagements start with a 30-minute scoping call. We'll scope the deliverable, confirm the right advisor coverage, and give you a timeline before work begins.</p>
+      <a href="/#contact" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold transition-all duration-200 glow" style="background:#00FF9D;color:#0D0D0F">
+        Start an Engagement
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-10 px-6" style="border-top:1px solid rgba(255,255,255,0.05)">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2.5">
+        <svg width="20" height="20" viewBox="0 0 40 40" fill="none">
+          <circle cx="20" cy="20" r="16" stroke="#00FF9D" stroke-width="0.6" opacity="0.3"/>
+          <g fill="#00FF9D">
+            <circle cx="20" cy="5" r="1"/>
+            <circle cx="32" cy="9" r="1"/>
+            <circle cx="35" cy="20" r="1"/>
+            <circle cx="32" cy="31" r="1"/>
+            <circle cx="20" cy="35" r="1"/>
+            <circle cx="8" cy="31" r="1"/>
+            <circle cx="5" cy="20" r="1"/>
+            <circle cx="8" cy="9" r="1"/>
+          </g>
+          <circle cx="20" cy="20" r="5.5" fill="#0D0D0F" stroke="#00FF9D" stroke-width="0.7"/>
+          <text x="20" y="22" font-family="Inter, sans-serif" font-size="5.5" font-weight="500" fill="#00FF9D" text-anchor="middle">rl</text>
+        </svg>
+        <span class="wordmark text-sm" style="color:rgba(255,255,255,0.55)">realtime labs llc</span>
+      </div>
+      <p class="text-xs" style="color:rgba(255,255,255,0.25)">© 2026 Realtime Labs LLC · San Francisco, CA · Intelligence belongs close to you</p>
+      <a href="mailto:website@realtimelabs.io" class="text-xs" style="color:rgba(255,255,255,0.35)">website@realtimelabs.io</a>
+    </div>
+  </footer>
+
+</body>
+</html>
